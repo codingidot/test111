@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- 5월 9일 -->
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function getXHR(){  //xhr함수(개발자가 만드는 통신객체생성하는 메소드(함수)3형식 정의문)
+	try{ //통신객체 //cross browsing
+		if(window.XMLHttpRequest) //표준형//IE11,firefox,chrome
+			return new XMLHttpRequest;
+		else if(window.ActiveXObject)// old IE?
+			return new ActiveXObject("MSXML2.XMLHTTP");
+		else //old IE2??
+			return new ActiveXObject("Microsoft.XMLHTTP");
+		
+	}catch(e){
+		xhr1=null;
+	}
+}
+
+function kajaServer(){
+	xhr1=getXHR(); //new XHR //xhr 통신객체 생성됨
+	xhr1.onreadystatechange=callback1; // onReadyStateChange라고 코딩하게됨 그럼 오류
+	//xhr1.open("get","/kaja.jsp". true); //비동기
+	
+	//xhr1.open("get","kaja2.jsp",true);//비동기  //기본코드는 utf-8만 가능(ajax에서)
+									//단 jsp는 예외
+//Q) 한글 이름을 입력받는 것과 같은 내용으로 처리하여 서버로 넘겨보자
+	xhr1.open("get", "kaja3.jsp?irum="+encodeURIComponent("지호"),true);
+	//ecu-kr로 돼있기 때문에 encodeURIComponent사용한거임 영어일때는 상관없음
+	//(1) meta charset="ECU-KR"이 utf-8로 되어 있으면 한글 잘나옴
+	//(2) 다른 방법은 utf-8로 수정하지 않고 encodeURIComponent 사용
+	xhr1.send(null);
+}
+
+/* function callback1(){
+	var ta=document.getElementById("ta");
+	switch(xhr1.readyState){
+	case 0:
+		ta.value+="객체생성\n"; break;
+	case 1:
+		ta.value+="send메서드 사용전\n"; break;
+	case 2:
+		ta.value+="send메서드 호출\n"; break;	
+	case 3:
+		ta.value+="아직 결과 다안옴\n"; break;	
+	case 4:
+		ta.value+="결과 다왔다고 전해라\n"; break;		
+	}
+} */
+
+function callback1(){
+	var ta=document.getElementById("ta");
+	switch(xhr1.readyState){//0,1,2,3,4
+	//응답상태를 나타내는 readyState값 변경시 마다
+	//onreadystatechange에 있는 callback1이름의 
+	//지금 콜백함수가 호출됨
+	case 4:
+		ta.value+="서버에서 다왔다는\n";
+		if(xhr1.status==200){ //제대로 왔나???
+				ta.value+="정상으로 옴\n";
+		ta.value+=xhr1.responseText+"\n";
+			
+		}else{
+			ta.value+="에러발생이라는\n";
+			ta.value+=xhr1.status+"\t"+xhr1.statusText+"\n";
+		}// 이 상태로는 에러, kaja.jsp 를 다시 받음
+		 //만일 실행에러이면 open에서 /를 지우고 해봄
+		break;
+	}
+}
+
+function kajaClear(){
+	var ta=document.getElementById("ta");
+	ta.value="";
+	
+}
+</script>
+</head>
+<body>
+<h3> AJax kaja-화면이 바뀌는감???</h3>
+<br>
+<textarea rows="20" cols="100" id="ta"></textarea>
+<br>
+<input type="button" value="서버로가자" onclick="kajaServer()">
+<input type="button" value="초기화" onclick="kajaClear()">
+</body>
+</html>

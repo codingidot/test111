@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+//자바처럼 public void kaja()등등이 없으므로 쉽고 재미있는 것은 불변~~
+function kaja1(){
+	document.write("함수123형식처리하자"+"<br>")	
+}
+
+function kaja2(screen){ //함수정의문 function //인자자료형 x
+	document.write("안녕자스2"," 몇시에 "+screen,"볼까","<br>")	
+}
+function kaja3(irum){
+	return irum+"와 영화"
+}
+</script>
+</head>
+<body>
+<script>
+kaja1();  //함수호출문 1형식
+kaja2("영화"); //함수호출문 2형식
+var bada=kaja3("철수"); //함수호출문 3형식
+document.write(bada+"가 결국 연인이 된다는 결말로 웹툰 끄~읕!")
+</script>
+
+</body>
+</html>

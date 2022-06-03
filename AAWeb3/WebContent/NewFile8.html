@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+*{margin:0; padding:0} /* 디폴트값 때문에 단, overhead */
+		/* 초기화: 모든 브라우저를 맞추어주겠다    https://meyerweb.com/eric/tools/css/reset/index.html
+			FF,safari 관계없이 같은 화면이 나오게 하겠다는 것	*/
+		
+#aa, #bb, #cc, #dd{
+	width:300px;
+	height:100px;
+	background-color:pink;
+}
+
+#aa{
+	color:blue;
+	overflow:hidden;  /* 이 문장의 의미는 글자가 overflow 가 나면 보여주지 마 */
+}
+/* 	overflow:(EDPS개론): 더 이상 넣을 수 없는데 넣는 경우
+		예) stack 에서 발생
+	underflow: 더 이상 꺼낼수 없는데 꺼내려고 할때 발생하는 애러
+		예) stack 에서 발생 */
+		
+#bb > pre{
+	color:red;
+	overflow:scroll;  /* 이 문장의 의미는 글자가 overflow가 나면 scroll나와 */
+}
+
+#cc{
+overflow:visible; /* 이 문장의  의미는 글자가 oveflow가 나면 그래도 보여줘 */
+}
+
+#dd{
+overflow:auto; /* 이 문장의  의미는 글자가 oveflow가 나면 auto */
+}		
+</style>
+</head>
+<body>
+<div id="aa">
+<pre>
+hidden
+		엄마야 누나야 강변살자			엄마야 누나야 강변살자
+	엄마야 누나야 강변살자		엄마야 누나야 강변살자	
+		엄마야 누나야 강변살자				엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+		엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	  아!! 다 보여줘~~~~~~~~~~~~~~~
+	  			 	
+</pre>
+</div>
+
+<p>&nbsp;</p>
+<div id="bb">
+<pre>  scroll 			
+			엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+		엄마야 누나야 강변살자
+	엄마야 누나야 강변살자 	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	스크롤은 가로로만 스크롤 되네
+	dddddddddddddddddddddddddd
+	
+	 
+
+</pre>
+
+</div>
+
+<p>&nbsp;</p>
+<div id="cc">
+<pre>visible
+		엄마야 누나야 강변살자			엄마야 누나야 강변살자
+	엄마야 누나야 강변살자		엄마야 누나야 강변살자	
+		엄마야 누나야 강변살자				엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	 	아~~그래<!!></!!>
+	
+	  			 	
+</pre>
+</div>
+
+<p>&nbsp;</p>
+<div id="dd">
+<pre>	auto
+		엄마야 누나야 강변살자			엄마야 누나야 강변살자
+	엄마야 누나야 강변살자		엄마야 누나야 강변살자	
+		엄마야 누나야 강변살자				엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	 	아~~그래<!!></!!>
+	
+	  			 	
+</pre>
+</div>
+
+
+
+</body>
+</html>

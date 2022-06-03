@@ -1,0 +1,27 @@
+@charset "EUC-KR";
+<!--  /* 4월 25일 */ -->
+
+/* 빛의삼원색: RGB 컬러 ==> white (색의 삼원색x)
+red=0~255(256가지 , 00-FF)
+r g b
+#ffff00==> 노랑빛
+#ff8040==> 진한빨강 적당히진한 녹색빛 약간진한 파랑빛 */
+/* webcontent-마오-new- file- jeoki.css  */
+
+h1{color: #ff0000} /* color에 마우스올리고 클릭하면 세밀한 color 변경가능 */
+
+p{color:#0080c0; font-size:30pt}
+
+.redred{color:#f14ebc}
+
+#myid{color: green; font-size:20pt}
+
+/* 보안을위해 가능한한 css를 외부파일로 만듬
+why? 소스가 안보이게 */
+
+/* html css ... > client side language..(server side)
+client side: 개발자가 서버에서 만들고 실행시에는 클라이언트로 가서 클라이언트 제어하에 실행
+그러므로 소스가 보임 보안문제 발생가능, 클라이언트로 보내서 처리하므로 분산되어 overhead가 적다
+
+server side: 개발자가 서벗에서 만들고 실행시에는 서버에서 실행
+그러므로 소스가 안보임 , 보안은 해결, overhead 발생가능*/

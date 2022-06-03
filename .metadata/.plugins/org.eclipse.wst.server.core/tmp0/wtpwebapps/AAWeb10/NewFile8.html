@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.autocomplete.js"></script>
+<script>
+var loveline=["babo", "ondal", "kongjoo", "sinderalla", "choonhyang", "leedoryung",
+	"바보", "온달", "공주", "신데렐라", "춘향", "이도령",
+	"바다", "온도", "축구공","신발", "향단이","도자기"];
+//한글처리를 위해 파일 저장시 utf-8로 저장할 것
+</script>
+</head>
+<body>
+<script>
+/*  $(function(){
+	 $("#lovelinename").autocomplete(loveline);
+ }) */
+ 
+ $(function(){
+	 $("#lovelinename").autocomplete(loveline, {matchContains:true});
+ }) 
+</script>
+<form>
+러브라인 이름:
+<input type="text" name="lln"  id="lovelinename" />
+</form>
+</body>
+</html>

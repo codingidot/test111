@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- 4월 22일 -->
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body bgcolor="yellow">
+
+
+ <form action="hello1.jsp" method="post">
+ <h1>소확행 모임 가입을위해 나의 모든 것을 알려주마</h1>
+ 
+ 이름 <input type="text" required placeholer="경석이">
+ &nbsp; 비밀번호 <input type="password" name="pw" size=22 maxlength=15 required><br>
+ 전화번호 <input type="tel" name="tel1" required><br>
+ 이메일 <input type="email" required placeholder="aa@aa.com"><br>
+ 생일년월 <input type="month" required><br>
+ 생일년월일 <input type="date" required><br>
+ 생일년월일(2000년이상 가입이 안됨) <input type=date max="1999-12-31"><br>
+ 생일은 1년중몇번째주 <input type="week" required><br>
+ 태어난 시간 <input type="time" required><br>
+ 현재시간 local-time   <input type="datetime-local" id='currentDateTime'><br>
+ 좋아하는색 <input type="color" name="color1" onchange="document.body.style.backgroundColor=this.value"> <br>
+ 좋아하는 숫자(0-100 10단위) <input type="number" name="number1" min="0" max="100" step="10"><br>
+ 성격(내성적-외향적)<br>
+ 내성적<input type="range" name="range1" min="1" max="100" step="10">외향적<br/>
+ 나의홈페이지주소 <input type="url" name="url1"><br>
+ 검색은 <input type="search" name="search1" placeholder="검색할것 입력"><br>
+ <input type="submit" name="submit1" value="가자 서버로"> 
+ 	
+ <script>
+ document.getElementById('currentDateTime').value= new Date().toISOString().slice(0, 16);
+ </script>
+ 	
+</body>
+</html>

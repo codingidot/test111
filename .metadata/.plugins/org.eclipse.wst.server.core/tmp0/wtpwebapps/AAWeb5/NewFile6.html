@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>행운의 로또 번호 출력하기(소트)</h1><br>
+<script>
+var i,j,arr1;
+arr1=new Array();
+
+for(i=0;i<6;i++){
+	arr1[i]=Math.ceil(Math.random()*45);
+	
+	arr1.sort(function(aa,bb){
+		return aa-bb;
+	})
+}
+document.write("<span style='font-size:50pt;color:blue'>");
+document.write(arr1[0]+" "); 
+document.write("</span>")
+
+document.write("<span style='font-size:50pt;color:orange'>");
+ document.write(arr1[1]+" ");
+document.write("</span>") 
+  
+document.write("<span style='font-size:50pt;color:violet'>");
+document.write(arr1[2]+" ");
+document.write("</span>") 
+
+document.write("<span style='font-size:50pt;color:blue'>");
+document.write(arr1[3]+" ");
+document.write("</span>") 
+
+document.write("<span style='font-size:50pt;color:green'>");
+document.write(arr1[4]+" ");
+document.write("</span>") 
+
+document.write("<span style='font-size:50pt;color:orange'>");
+document.write(arr1[5]+" ");
+document.write("</span>") 
+
+</script>
+</body>
+</html>

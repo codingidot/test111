@@ -1,0 +1,34 @@
+############front controller ##############
+일단 Servlet(서블릿)은 controller에서 사용(business logic, 계산, 판단)
+view- .jsp,   controller- servlet(.java)(웹자바, http)
+
+###. 컨트롤러
+필요에 따라 여러개의 컨트롤러를 만들어야함(수정, 삭제...)
+	ㄴ오히려 spring 에서는 이렇게 여러개 컨트롤러를 사용
+	
+#.web의 MVC2 에서의 문제점
+	-. controller가 많다
+    -. 총괄하는게 없다
+    -. 일관성도 없다
+    -. 컨트롤러에 접근하는 방법이 다양할수도 있다.
+    	<a href="http://.......서블릿명"
+    	<a href="서블릿명"  //<a href="Hakjum"
+    	<form action=""
+    	
+#. 해결
+-. front controller를 사용 (총괄매니저), 단 소스가 길어질수는 있다
+		ㄴ 별도로 서비스부분을 만들어서 해결
+-. 접미사에 .do를 붙여 사용(.bo, .co ....)
+
+	예)https://www.work.go.kr/kua/index.do
+	국민취업지원제도
+	
+	이전사이트)https://www.work.go.kr/pkg/succ/index.do
+		ㄴ취성패사이트
+(참고) 스프링의 경우는 컨트롤러를?
+	회장 별도로 x
+	사장
+	ㄴ비서(서비스)
+	
+	
+					    	

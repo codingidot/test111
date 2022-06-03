@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+        <script>
+                window.onload = function () {
+                        visit()
+                }
+                function visit() {
+                        if(document.cookie.indexOf("annaeCookie") != -1){
+                                var cnt = document.cookie.substring(12,document.cookie.length)
+                                cnt=parseInt(cnt)                                //annaeCookie=1
+                                cnt++                                                        //            12번째
+                                alert("당신은 "+cnt+"번쨰 방문이십니다")
+                                //document.write("당신은 +cnt+"번쨰 방문이십니다")
+                                document.cookie = "annaeCookie="+cnt+";"
+                                //alert(document.cookie)
+                        } else {
+                                var today = new Date()
+                                today.setDate(today.getDate()+1)
+                                document.cookie = "annaeCookie=1;expires=" + today.toUTCString()
+                                alert("당신은 1번째 방문이십니다")
+                        }
+                }
+        </script>
+</head>
+
+<!-- 단, 브라우저에서 f12눌러 해당 쿠키 찾아가서 -마오 -edit value로 값을 변경하면 
+         방문횟수 수정이 가능 -->
+
+<body>
+        <h2>
+                <pre>
+                        환영합니다 10번이상 방문 시 부터
+                        방문 횟수에 따라
+                        선물을 드립니다
+                        계쏙해서 방문해주시길 바랍니다
+                </pre>
+        </h2>
+        <a href="http://www.naver.com"><h1>우리 사이트 네이버로 이동하기</h1></a><br>
+</body>
+</html>

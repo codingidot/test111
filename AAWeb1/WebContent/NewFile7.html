@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+ 지금 입력하시는분 정중히 요청하오니 엔터는 절대로 치지마시고 tab 눌러주세요<br>
+ 
+ <form action="hello1.jsp" method="get">
+ 	이름	<input type="text" name="irum"><br> <!-- 글상자(textfield), txtIrum -->
+ 	전화번호 <input type="text" name="tel"> <br>
+ <input type="submit" value="가자서버로">
+ 		<!-- 버튼,"가자서버로" ("눌러봐") submit은 버튼으로서 서버로 보내자 -->
+ <input type="reset" value="가긴멀가 취소~~"	>
+ 			<!-- 버튼, "가긴멀가 취소~~" 입력된 것 취소	 -->
+ 			
+ </form>	
+ <hr>
+ <br><br>
+ <form action="hello1.jsp" method="post"> <!-- post로 하니 위에 안뜸 -->
+ 	이름	<input type="text" name="irum" required><br> <!-- 글상자(textfield), txtIrum -->
+ 	전화번호 <input type="text" name="tel" required> <br>
+ <input type="submit" value="가자서버로">
+ 		<!-- 버튼,"가자서버로" ("눌러봐") submit은 버튼으로서 서버로 보내자 -->
+ <input type="reset" value="가긴멀가 취소~~"	>
+ 			<!-- 버튼, "가긴멀가 취소~~" 입력된 것 취소	 -->
+ 			
+ </form>	
+ <br><br><br>
+ <hr>
+ <br><br>
+ <form action="hello1.jsp" method="post"> <!-- post로 하니 위에 안뜸 -->
+ 	이름	<input type="text" name="irum" autofocus required placeholder="kildong hong"><br> <!-- 글상자(textfield), txtIrum -->
+ 	전화번호 <input type="text" name="tel" required> <br>
+ 	이메일 <input type="email" name="email2" required placeholder="aa@aa.com">
+ 	생일 <input type="date" name="nalja" required>
+ <input type="submit" value="가자서버로">
+ </form>
+ 
+  <br><br><br>
+ <hr>
+ <br><br>
+ 
+
+ 
+ 
+ 
+ 
+</body>
+</html>

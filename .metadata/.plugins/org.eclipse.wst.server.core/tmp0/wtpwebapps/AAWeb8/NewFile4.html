@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>식사메뉴</title>
+<script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+	<h1>식사메뉴</h1>
+	<div class="f1">
+		<p>식사 메뉴</p>
+		<ol id="s1" class="s1">
+			<li>백반</li>
+			<li>돈까스</li>
+			<li>햄버거</li>
+			
+		</ol>
+		<p>후식메뉴</p>
+		<ul id="h1">
+			<li>커피</li>
+			<li>차</li>
+			<li>과일</li>
+		</ul>	
+	</div>
+	
+<script>        //돈까스
+alert($("#s1 li:eq(1)").text());   //alert + text() ==>getText()
+	//s1 id를 참조하여 <li>중 1번째 요소의 문자열 //돈까스
+	//여기서 text를 javascript로 표현한다면??? innerHTML
+
+			
+//추가로 body태그까지 사용하여 "돈까스" 출력하시오
+alert($("body ol li:eq(1)").text()); //돈까스
+
+
+alert($("li").length);
+//li 태그의 갯수 6개
+
+
+alert($("li, p,ol").length);  //6+2+1=9
+
+$(".s1").css("color","blue");
+
+</script>	
+	
+</body>
+</html>

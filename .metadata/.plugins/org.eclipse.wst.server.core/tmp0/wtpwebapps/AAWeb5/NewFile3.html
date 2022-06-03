@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>구구단 중 3단만</h1>
+	<script>
+	document.write("<table border='2'>")
+	var j
+	var i
+	for(i=2;i<=9;i++){
+		document.write("<tr align='center' > <td colspan=2>"+i+"단</td> </tr>")
+	for(j=1;j<=9;j++){
+		document.write("<tr align='center'><td>")
+		document.write(i+"*"+j+"=</td> <td>"+i*j+"</td></tr>")
+		
+	}}
+	document.write("</table>")
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자동차-장바구니로</h1> <!-- controller여러개, servlet 세션 -->
+<form action="CartAdd" method="post">
+<input type="radio" name="car" value="BMW">BMW<br>
+<input type="radio" name="car" value="sonata">sonata<br>
+<input type="radio" name="car" value="K5">K5<br>
+<input type="submit" value="장바구니 넣기"/>
+<a href=CartAdd?car="hey" >상품목록</a> <!-- name으로 지정된것만 ?다음에 넣을수있다 -->
+</form>
+</body>
+</html>

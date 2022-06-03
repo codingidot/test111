@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<addCategory
+		id="category_1647999492459"
+		name="Custom"
+		description="Container for custom components"
+		visible="true"
+		open="true"/>
+	<addComponent
+		id="custom_1647999492458"
+		name="JFileChooser"
+		description="Creates javax.swing.JFileChooser component."
+		visible="true"
+		class="javax.swing.JFileChooser"
+		category="category_1647999492459"/>
+	<moveCategory
+		id="category_1647999492459"
+		nextCategory="org.eclipse.wb.swing.JGoodies"/>
+</commands>

@@ -1,0 +1,17 @@
+
+
+jsp=html  + 자바(<% %>) ===>가독성 down
+el(Expression Language) 사용
+         ㄴ el에서 ${kab}은 자바표현식으로는 <%=kab%>과 같다
+         					   out.println(kab)
+         					
+ remember : action tag <jsp:forward ...>
+ 
+ 가능한한 자바 문법사용을 줄이기위한 목적(가독성문제)중의
+ 하나로 사용(action tag,useBean...)
+ parsing이 간단해져서 비교적 속도빠름,
+ 아주 복잡한 경우는 표현이 어려움
+ 
+ 예) %>
+ 	<br>
+ 	<%}%>        					

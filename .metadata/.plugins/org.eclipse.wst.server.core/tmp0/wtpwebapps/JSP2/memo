@@ -1,0 +1,8 @@
+cos.jar 다운로드 및 설치(파일 업로드를 위해)
+
+http://servlets.com/cos 에서 cos-26Dec2008.zip 을 다운로드 후 압축 풀기 ( cos-20.08.zip )
+압축 푼 폴더의  cos-26Dec2008/lib 의 cos.jar 파일을 복사 해서 /WebContent/WEB-INF/lib 안에 복붙으로 넣는다 ( standard.jar, jstl.jar, ojdbc8.jar )
+적용을 위해 프로젝트 새로고침
+upload 전에 d: 에 upbang 폴더를 하나 만든다
+바탕화면에 올릴 파일 하나를 준비한다
+→ 사용자의 바탕화면에 있는 파일을 서버의 d:드라이버 upbang폴더 에 올리는 것 ( d:/upbang)

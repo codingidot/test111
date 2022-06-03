@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AAWeb2/WebContent/music/율레코드 - 좀 더 날 사랑했을텐데.mp3&apos; to &apos;b.mp3&apos;" description="Rename resource &apos;율레코드 - 좀 더 날 사랑했을텐데.mp3&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/music/율레코드 - 좀 더 날 사랑했을텐데.mp3" name="b.mp3" stamp="1652005568997" updateReferences="true"/>
+</session>

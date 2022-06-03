@@ -1,0 +1,39 @@
+########BOM vs DOM
+
+BOM:
+	(1) browser object model
+	(2) window 객체등 자바스크립트에서 활용가능한
+		브라우저 관련 객체를 제공
+		(예) window.location="http://www.naver.com"
+			(최상위) 객체.속성=값
+			(OOP 작성 3단계중 (정의-생성-사용 중)
+			정의와 생성은 이미구현) 그러므로 사용만 하면 됨
+	(3) tree 구조로 표현
+			
+			[window객체] -속성, 메소드, 이벤트 (location, alert()....)
+	 +---------|-----------+
+	 |         |           | 
+[document객체][location객체].............
+  image
+  form
+  
+  <head><html> 등등에서 접근x
+  	 
+(참고) flutter: widget tree
+
+
+
+###. DOM
+(1) document object model BOM의 일부이다
+(2) dom document 구성원인 html, head등에 "(1)접근"이 가능하도록 해준다
+(3) dom은 해당 구성원의 내용이나 색등을 "(2)동적변경"이 가능하도록 해준다
+(4) body등의 태그를 자바스트립트에서 활용하도록 객체로 만들어 준것
+(5) dom은 html태그를 tree 구조로 표현한다
+
+		[window객체] -속성, 메소드, 이벤트 (location, alert()....)
+	 +---------|-----------+
+	 |         |           | 
+[document객체][location객체].............
+  image
+  form
+ HEAD, TITLE, SPAN......	 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제목은 웃는표정˃ᴗ˂</title>
+
+<script>
+        function mut(){ //함수 정의문
+                alert("멋잇서");
+        }
+        function sa(){
+                alert("사랑해");
+        }
+        function ebbu(){
+                alert("이뽀");
+        }
+</script>
+
+</head>
+<body>
+
+<script>
+
+
+/* 객체.속성 = 값 / 객체.이벤트 = 이벤트핸들러 */
+
+document.onclick = ebbu;
+
+/* onclick이 따로 지정된게 없으니까, 
+회면 아무곳이나 누르면 이벤트 실행 */
+</script>
+
+
+<!-- 여기는 div태그로만 묶었고 -->
+<div ONCLICK = "mut()">
+        나어때
+</div>
+
+<!-- 여기는 div속에 span태그까지 넣어서 묶었네요
+무슨차이가 있는지  -->
+<div ONCLICK = "mut()">
+       <!--  <span ONCLICK="sa();event.stoppropagation()">  크롬 버전문제(부모쪽 중단)-->
+       <!--  <span ONCLICK="sa();event.preventDefault()"> 크롬버전 문제(동작중단) -->
+       		<span ONCLICK="sa();event.stopImmediatePropagation()">
+                신상입은 나 어때
+                
+        </span>
+</div>
+
+</body>
+</html>

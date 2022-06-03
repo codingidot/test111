@@ -1,0 +1,22 @@
+<%@page import="tellinfoVO.TelInfoVO" %>
+<%@page import="java.util.ArrayList" %>
+<%@page import="telInfoDAO.TelInfoDAO" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>사원 전체명단</h1>
+<%
+	request.setCharacterEncoding("utf-8");
+	response.setCharacterEncoding("utf-8");
+	
+	TelInfoDAO tidao=new TelInfoDAO(); //dao 객체
+	ArrayList<TelInfoVO> tiArray=tidao.getAllInfo();
+%>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>학점계산</h1>
+<form method="post" action="Hakjum4">
+	<!-- 확장자 없는 Hakjum4는 서블릿으로 간다는것을 알수있다 -->
+이름<input type=text name="irum"><br>
+점수입력<input type=text name="jum"><br>
+<input type=submit value="가자서버로"><br>
+<input type=reset value="가긴뭘가취소"><br>
+
+</form>
+</body>
+</html>

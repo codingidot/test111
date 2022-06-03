@@ -1,0 +1,12 @@
+
+
+######### JTextarea 스크롤바 생기게 
+-. 먼저 scrollpane을 올리고 
+-. 그위에 JTextarea를 올리면  viewport개념으로 크기가 일치한다
+
+(이것이 잘 안되면 먼저 JTextarea를 만들고 
+	왼쪽 Structure 창 JTextarea에 마우스놓고 
+	-마오- surround with - scrollpane을 선택 하면 조금 편리하다)
+
+	(소스참고) scrollPane.setViewportView(textArea);
+-. 실행후 글자를 계속넣어보고 한줄 길게 넣어보면 스크롤바가 both로 생긴다.

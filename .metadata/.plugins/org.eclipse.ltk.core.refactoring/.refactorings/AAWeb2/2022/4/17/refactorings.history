@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AAWeb2/WebContent/video/Jellyfish - 110877.mp4&apos; to &apos;b.mp4&apos;" description="Rename resource &apos;Jellyfish - 110877.mp4&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/video/Jellyfish - 110877.mp4" name="b.mp4" stamp="1650612136010" updateReferences="true"/>
+</session>

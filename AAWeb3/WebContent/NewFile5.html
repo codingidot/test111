@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+*{margin:0; padding:0;}
+
+#aa,#bb,#cc{
+	width:300px;
+	height:100px;
+	background-color:pink;
+}
+
+#aa{position:static}
+ /* static은 기본값: 맨위쪽, 맨왼쪽에 들어감, top,left,bottom, right등은 기록햇어도 사용안함 */
+#bb{position: absolute; top:50px; left:50px;}
+#cc{position:absolute; top:100px; left:100px}
+</style>
+</head>
+<body>
+<div id="aa">
+엄마야 누나야 강변살자   엄마야 누나야 강변살자
+엄마야 누나야 강변살자   엄마야 누난야 강변살자
+</div>
+d<div id="bb">
+엄마야 누나야 강변살자   엄마야 누나야 강변살자
+엄마야 누나야 강변살자   엄마야 누난야 강변살자
+</div>
+
+<div id="cc">
+엄마야 누나야 강변살자   엄마야 누나야 강변살자
+엄마야 누나야 강변살자   엄마야 누난야 강변살자
+</div>
+</body>
+</html>

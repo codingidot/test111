@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+
+<script>
+function kaja(){
+	var ta=document.getElementById("ta");
+	$.ajax({
+		url:"aa.txt", /*  url: "hello.jsp", //open(method,url,async) */
+		// txt파일은 jsp가 아니므로 utf-8로 바꿔준다
+		//aa.txt파일 -마오-properties-other-utf8로 변경
+		type:"get", //open
+		success:function(result1){
+			ta.value=result1;
+		},
+		error:function(xhr1,status){
+			alert("에러상태:"+"\t"+xhr1.status); //statusText
+		}
+	});
+}
+</script>
+</head>
+
+<body>
+<h1>Ajax를 사용하여 메모장에 있는 소설을 읽는 웹앱을 작성하시오</h1>
+<textarea cols=100  rows=20 id=ta></textarea><br>
+<input type=button value="소설텍뷰" onclick=kaja()>
+</body>
+</html>

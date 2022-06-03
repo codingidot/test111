@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+var kab;
+var i=1;
+function nawa(){
+	kab="fish"+i;
+	var fish11=document.getElementById(kab);
+	fish11.innerHTML="<img src='fish.jpg'>";
+	i++;
+}
+</script>
+</head>
+<body>
+
+<form name=form1>
+	<img src="fish.jpg" onclick="nawa()">
+	<div id="fish1"></div>
+	<div id="fish2"></div>
+	<div id="fish3"></div>
+	<div id="fish4"></div>
+	<div id="fish5"></div>
+	<div id="fish6"></div>
+
+</form>
+
+</body>
+</html>

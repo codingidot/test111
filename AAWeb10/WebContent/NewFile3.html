@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<h1>가자 거인나라</h1>
+<div>
+	<img src="images/child2.jpg" id=child2 />
+</div>
+<script>
+$(function(){
+    $("img").attr("width",100).attr('height',130);
+    
+    setInterval(function(){
+            $('#child2').animate({width:"+=30"},1000).animate({height:"+=30"},500);        
+    },3000); // 3초 간격으로 1초동안 가로 너비 증가, 0.5초 동안 높이 증가 
+    // animate({속성:값}, 동작시간(ms))
+    
+});
+
+</script>
+</body>
+</html>

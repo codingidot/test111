@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	var intBae=[30,50,70]
+	
+	/* 자바 for문에서 뒤에서 하나씩 꺼내 임시방에 넣은 다음 출력
+	이것을 반복하는 문법 */
+	
+	for(var imsi in intBae){ //for~in함수
+		document.write(imsi+"\t"+intBae[imsi]+"<br>");
+		}
+	
+	
+	//자바에서 객체 만들기
+	//new로 만듬
+	
+	//var aa="ondal" //aa 기억창고에 ondal 넣어라
+	var myObj={} //여기서 myObj는 객체
+	
+	
+	
+	//객체는 속성, 메소드를 갖고있다
+	//자바라면 private int price로 선언
+	//초기치는 setPrice()
+	
+	//속성:값.......비교는 json(JavaScript Object Notation)
+	var myObj2={color:"red",door:4,price:30000000}
+	for(var imsi2 in myObj2){ //for~in함수
+		document.write(imsi2+"\t"+myObj2[imsi2]+"<br>");
+		}
+	</script>
+
+</body>
+</html>

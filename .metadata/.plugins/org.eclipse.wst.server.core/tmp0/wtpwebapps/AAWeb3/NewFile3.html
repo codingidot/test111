@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+ /* 3가지 배치: inline  inline-block   block */
+ .disstyle1 ul li { display:inline;  background-color:blue; margin:100px; padding:100px;}
+ /* 가로배치,width와 height를 못쓴다. margin과 padding 좌우간격만 사용 */
+
+ .disstyle2 ul li{ display:inline-block; padding:100px;
+				margin:100px; width:130px; height:130px;
+				background-color:pink;	
+}
+
+	.disstyle3 ul li{color: red; display:block; width:130px; height:130px;
+	padding:10px; margin:10px; background-color:cyan;
+	}
+
+</style>
+</head>
+<body bgcolor="yellow" text="black">
+<div class="disstyle1">
+<ul>
+	<li><a href="#">여우1</a>
+	<li><a href="#">기린1</a>	
+
+</ul>
+</div>
+
+<div class="disstyle2">
+	<ul>
+	<li> <a href="#">여우2</a>
+	<li> <a href="#">기린2</a>	
+	
+	</ul>
+
+</div>
+
+<div class="disstyle3">
+	<ul>
+	<li> <a href="#">여우3</a>
+	<li> <a href="#">기린3</a>	
+	
+	</ul>
+
+</div>
+
+<div style="display:none"> <!-- 만들어놓고 안보이게 setVisible(false)개념 -->
+	<ul>
+	<li> <a href="#">여우4</a>
+	<li> <a href="#">기린4</a>	
+	
+	</ul>
+
+</div>
+
+<div style="display:block"> <!-- 보이게(세로로) -->
+	<ul>
+	<li> <a href="#">여우5</a>
+	<li> <a href="#">기린5</a>	
+	
+	</ul>
+
+</div>
+<!-- keyword 광고 -->
+
+오늘 날씨는 바람이 없고...
+    ---
+    날씨에 마우스를 대면 손가락이 나옴
+    
+      
+</body>
+</html>

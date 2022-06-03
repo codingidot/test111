@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자동차-장바구니로</h1> <!-- controller여러개, servlet 세션 -->
+<form action="Cartro" method="GET">
+<input type="radio" name="car" value"BMW">BMW<br>
+<input type="radio" name="car" value"sonata">sonata<br>
+<input type="radio" name="car" value"K5">K5<br>
+</form>
+</body>
+</html>

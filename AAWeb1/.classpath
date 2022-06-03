@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk11">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5 (5)">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/프로그래밍/수업정리/cos.jar 이미지업로드/lib/cos.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/프로그래밍/수업정리/cos.jar 이미지업로드/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/프로그래밍/수업정리/cos.jar 이미지업로드/lib/standard.jar"/>
+	<classpathentry kind="output" path="buld/classes"/>
+</classpath>

@@ -1,0 +1,38 @@
+package com.haeva.my;
+
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import telinfoDAO.TelInfoDAO;
+
+public class HaevaTelInsert implements HaevaImpl {
+
+	@Override
+	public void haeva(HttpServletRequest request, HttpServletResponse response) throws Exception {
+			System.out.println("메서드 들어옴");
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		
+		 int id=Integer.parseInt(request.getParameter("id")); 
+		 String name1=request.getParameter("name"); 
+		 String tel=request.getParameter("tel");
+		 String d=request.getParameter("sDate");
+		 
+		 TelInfoDAO tidao=null;
+		  
+		 try { tidao=new TelInfoDAO(); }
+		 catch (ClassNotFoundException e) {
+		 e.printStackTrace(); } 
+		 catch (SQLException e) { e.printStackTrace(); } 
+		 try {
+		 if(tidao.insert_nametel(id, name1, tel, d)) {
+			 System.out.println("추가완료");
+		 } 
+		 }
+		 catch (SQLException e) { 
+		 e.printStackTrace(); }
+	}
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+<script>
+//window.alert("안녕 자바스크립트") //객체 메소드  //메시지박스
+
+//alert("윈도우생략했네")
+
+//window.location="http://www.naver.com"
+//자바스크립트는 문장끝에 ;를 안써도 됨
+//단, 2문장을 한줄에 사용시에는 ;을 써야 됨
+//그래서 습관을 정해야함,\
+//alert("윈도우생략했네"); alert("윈도우생략했네")
+
+//document.write("글씨쓰는 부분")// 객체.메소드
+//write("글씨쓰는 부분") x
+
+//alert("안녕 자바스크립트"+" 반갑네");
+//alert("안녕 자바스크립트","반갑네"); //이것은 인자가 2개 x
+//x(실행은 되는데 반갑네 글자가 안나옴 //why? 인자가 하나
+
+		//document.write("글씨쓰는 부분-2")
+		//alert("안녕 자바스크립트2");
+
+
+
+/* document.write("<h1>엄청 덥다는</h1>") //자바스크립트(html 문법을 추가하기)
+
+//int, double, char .....x
+//int aa ==> var aa
+// char bb ==> var bb
+var aa=30; //int
+var bb=56.7; //double
+var cc="ondal"; //String
+
+document.write(aa+", "+bb+", "+cc+"<br>"); // +는 연결기호
+alert(aa+","+bb+","+",") */
+
+
+
+/* document.write("이름이"+"\t"+"홍길동"+"\t"+"이군요"+"<br>")
+document.write("이름이"+"<br>"+"홍길동"+"\t"+"이군요")
+
+ */
+ 
+ 
+/*  Q) 자바스크립트 문법을 사용하여 오늘날짜를 출력하시오 */
+  
+ var time=new Date() /* 내장객체 */
+ 
+ document.write(time+"<br>")
+ 
+ // 날짜만 출력
+ document.write("<br>날짜만출력하면"+time.getDate())  //객체.메소드()
+ 
+//자바에서 Scanner
+//prompt()
+//window.prompt() //객체.메소드()
+  document.write("<br>이름이",window.name,"이군요"+"<br>") 
+ name=prompt("이름적어라!!!","조동현")
+ //var name=prompt("너 이름이 뭐니?","조미래") //조미래는 예시이름 //자바의 Scanner
+ document.write("<br>이름이",name,"이군요"+"<br>")
+ document.write("이름이"+"\t"+name+"\t"+"이군요"+"<br>")
+ document.write("<br>이름이",window.name,"이군요"+"<br>") 
+
+</script>
+
+</body>
+</html>

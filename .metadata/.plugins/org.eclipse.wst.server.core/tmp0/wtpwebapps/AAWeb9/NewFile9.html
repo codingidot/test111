@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="js/jquery-3.3.1.js"></script>
+<title>Insert title here</title>
+
+        <script>
+        
+        $(function() { //toogle
+                var soo=[1,2,3,4]; //index 0, 1, 2 // value 1, 2, 3, 4
+                
+                $.each(soo,function(index,value){ // for(var imsi in ...)
+                        $('#title' + value).click(function() {
+                                if($('#stitle' + value).is(':hidden')) //hide 상태면?
+                                                $('#stitle' + value).show(); // 보여준다
+                                else // show상태면 
+                                        $('#stitle' + value).hide(); // 숨긴다
+                        });//click-end
+                });//function-each-end
+        });//$(function)-end
+        
+        </script>
+
+</head>
+<body>
+   <div id="title1"> <h3>영화관으로</h3> </div>
+           <div id="stitle1"  style="display:none">
+              <ul>
+                 <li><A href="#">영화제목은</A>
+                 <li><A href="#">상영관안내</A>
+              </ul> 
+           </div>  
+  
+  <div id="title2"> <h3>식당으로</h3> </div>
+          <div id="stitle2"  style="display:none">
+             <ul>
+                <li><A href="#">음식메뉴는</A>
+                <li><A href="#">맛집안내</A>
+             </ul>
+          </div>  
+  
+  
+  
+  <div id="title3"> <h3>후식</h3> </div>
+          <div id="stitle3"  style="display:none">
+             <ul>
+                <li><A href="#">커피메뉴는</A>
+                <li><A href="#">차메뉴는</A>
+             </ul>
+          </div>  
+  
+  <div id="title4"> <h3>주차</h3> </div>
+          <div id="stitle4"  style="display:none">
+             <ul>
+                <li><A href="#">주차장약도는</A>
+                <li><A href="#">주차요금안내</A>
+             </ul>
+          </div>  
+</body>
+</html>
+

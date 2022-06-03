@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>HTML5 Semantic</title>
+</head>
+<body>
+<header><!--  머리:제목, 타이틀 그림 -->
+<h1>쇼핑몰</h1>   <!-- h태그가 나와주어야(검색엔진에게도 중요한 것) -->
+</header>
+<nav> 메뉴(navigation):검색엔진과 연관됨
+	<ul>
+	<li><a href='#'> 구두</a>
+	<li><a href='#'> 가방</a>
+	</ul>
+
+</nav>
+<!-- html구성
+ㄴ (1)table (2)float: left, right  (3) Semantic -->
+
+<section><!--  section에 여러개의 article 작성가능 -->
+<article>
+	<h1>구두의 역사</h1> <!-- h태그가 나와주어야 -->
+	<div id="histid">역사에대해</div> <!-- #histid ctrl+E -->
+	<div id="jepumid">주요제품은 뭐지</div>
+</article>
+<article>
+
+</article>
+</section>
+
+<aside>
+	<h1>추가설명부분</h1>   <!-- 배너광고등, 광고동영상 -->
+	<pre>제품을 만들때는 최선을 다합니다</pre>
+</aside>
+
+<footer> 주소 저작권등
+종로3가 구두본점
+<address>종로3가 단성사 옆골목 234번지</address>
+</footer>
+</body>
+</html>
+
+<!-- html5 semantic web=의미있는 웹
+(사람이나 기계가 쉽게 이해할수 있는 웹)
+제안자:팀버너스리(웹을 만든사람)
+crawling:웹을 돌아다니면서 자료를 수집하는 것(기어가다)
+search engine ==> search robot ==> ant man x
+
+(참고)크롤링의 경우:
+관련 package 인스톨 후 R로 작성,
+BeautifulSoup등을 사용하여 python으로 작성
+
+예)
+<div id=footer>여기는 주소를적는 곳입니다</div> ==> 잘 구분 안됨
+<footer>여기는 주소를 적는 곳입니다</footer> ==>구분이 잘됨 -->

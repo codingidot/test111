@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<!-- 자바스크립트
+
+onclick="alert()"  onclick="kaja();"
+
+	function kaja(){}
+	==>jquery에서는 click(function...) -->
+	
+	<h1>수를 클릭으로 곱하지 말입니다</h1>
+	<h2>앞수클릭</h2><h3 id="ap">15</h3>
+	<h2>뒤수클릭</h2><h3 id="dui">10</h3>
+	<h2>답클릭</h2><h3 id="dap">0</h3>
+<script>
+$(function(){
+	var ap1, dui1
+	$("#ap").click(function(){
+		ap1=$(this).text()
+	});
+	
+	$("#dui").click(function(){
+		dui1=$(this).text()
+	});
+	
+	$("#dap").click(function(){
+		var dap=ap1*dui1
+		$(this).text(dap);
+	})
+});
+</script>
+</body>
+</html>

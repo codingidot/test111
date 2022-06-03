@@ -1,0 +1,161 @@
+jQuery=javascript framework: 자바스크립트를 줄여서 만든것
+Ajax: Asynchronous javascript + xml(비동기)
+:page 변환없이 한페이지에서 결과가 나오는 것처럼 보인다
+(예) 쇼핑몰 댓글달때 화면변경없이 내가 친것 그대로 목록에 보인다
+
+-------------------------
+    [javascript]
+-------------------------
+
+-. 자바스크립트 =NOT java
+	html: 틀, 골격, 사람자체
+	css: 디자인, 옷
+	javascript: 움직임, 동작, 댄스, 축구
+	(예) 회원가입 : 숫자대신 문자치는 경우 해결하는 js
+	
+	
+	(참고) 원래 script란?
+	
+	log 관련 회사....
+	
+	javascript 특징
+	(1) 접근할수 있는 html 태그가 한정된 것이 기본
+	
+	javascript 는 언어.. 태그에 접근해야함
+	100% 태그 접근이 안됨
+	
+	<img> <input>에는 접근가능
+	<body><h1><div> x
+	
+	(2)계층적 구조
+	window > document> form > img
+						    > input
+					> img
+					
+	(3) html은 w3c에서 관장
+	javascript는 ECMA(Europe Computer Manufactue Association)
+	==> ECMAScript
+	
+	(4) client side language
+	
+	(5) compile 방식, interpreter 방식
+	
+	compile 방식: 영어를 기계어로 변환, 계속 실행가능
+				단, 영어소스가 수정되면 다시 번역
+				(c, java, c#)
+				단, java가 jitter 번역시 interpreter 방식			
+    interpreter 방식: 기계어로 변환 x, 실행시 매번 번역
+    			(python, basic, javascript, html, css...)
+    				 				(번역기는 web browser에 있다)
+			
+			* netspace 가 Breden Eich를 영입하여 개발
+			* 추후 sun microsystems과 공동으로 개발하면서 javascript로 명명
+			* 자바스크립트는 소스코드를 web browser가 해석하여 run하는 script언어	
+			
+		(DOMScript ?????)
+		javascript+DOM(W3C) ==> dhtml (Dynamic html)
+			(모든태그에 접근하자)
+			(document object model)
+			
+		dhtml < xhtml(x)
+		
+		www.d h teu meu leu.com		
+		
+		
+		* 자바스크립트는
+		객체기반언어-->객체지향언어
+		 Object oriented language
+		 		(based)
+		 		
+		 class x (ruby 등): class 대신에 function을 사용
+		
+		<작성시>
+		*<script> 태그사용
+		*기본적으로 html 문서에 작성되어 실행된다(자바스크립트= html + script태그)
+				(마치 .jsp=html+자바)
+				즉, html+자바스크립트
+				
+				단, script내에서의 html 문은 자스+ html
+				{예)
+				<body>   <!--html태그+script태그 -->
+					<script>
+					alert("온달")
+					document.write("<h1>온달</h1>"); //스크립트문장 (html 문장)
+					</script>
+				</body>	
+			
+			
+ -. 자바스크립트 객체 종류 3가지
+ * user defined object(사용자 정의 객체): 정의-생성-사용
+ 	정의:
+ 		자바:  class BBang{]
+ 		자바스크립트:function BBang(){} //기본적으로 함수 호출
+ 		BBang= function(){}
+ 		
+ *내장객체: (정의)-생성-사용
+ Date d=new Date()
+ 
+ * 브라우저객체 (BOM:Browser Object Model) :
+ (정의-생성)-사용
+ window.location="http://www.naver.com"  //객체.속성=값
+ window.alert() //객체.메소드()
+  	
+  cross=platform(안드로이드, 애플)
+   flutter: widget(everything is widget)
+   
+   Q) BOM관련 객체, 객체마다 있는 속성, 메소드를 찾아내시오
+   예)    		객체
+   			window객체, document객체, event객체 ...
+   			
+   			window 객체
+   				ㄴ속성: location,...
+   				ㄴ메소드:alert()....					
+				ㄴ이벤트
+				
+##########자바스크립트 문법(flexible)
+				window.alert() //객체.메소드()  //메시지박스
+				document.write("안녕") //글씨써지는 빈 공간 부문에 글씨를 쓰는것				
+    ###대소문자 구분 alert() o     ALERT() x
+    		    <html> o      <HTML> o
+    		    
+  (참고) 이클립스에서 block후 ctrl+shift+x 소문자-> 대문자
+  						ctrl+shift+y 대문자->소문자
+  ### "", ''둘다 사용가능    alert("바보")  alert('바보')
+  (단, "    '   '    " or  '   "   "   ')
+  ###;은 사용, 비사용 다됨( 단, 문장연결사용시는 사용해야)
+  --습관을 정하는 것이 좋다
+  alert()  o  //window 객체는 최상위객체라서 객체명 생략이 가능  //window.alert()
+  alert(); o  
+  alert(); alert() o
+  
+  
+  window(속성,메소드)
+   |
+  document(속성,메소드)
+   |
+  form						  		    						  
+
+### 주석은 자바처럼 //, /* */ 사용
+
+### 변수 자료형은 var이다(only)
+자바의 경우 int, double,.....
+
+var aa=30; (int aa=30;)
+var aa="ondal" (String aa="ondal")
+
+
+- 변수의 자료형은 생략가능하다
+	bb="babo"
+	
+- 변수 선언위치 및 의미
+	var dd; //전역(함수밖에서 선언)
+	function kaja(){ //함수 (메소드정의문)
+		aa=50; //전역
+		var bb=100; //지역
+		dd=200;	
+   }
+  
+  aa=70; //50이 들어있다가 70이 들어감
+  bb라는 변수를 찾아보면 x
+  dd를 출력해봐라 o 
+    

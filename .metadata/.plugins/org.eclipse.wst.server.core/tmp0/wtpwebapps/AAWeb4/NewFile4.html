@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- 4월 26일 -->
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+html, body{padding:0px; border:0px; margin:0px;}
+
+div{display:table; width:100%}/*  table parent즉, <table> 정의 */
+   
+                               /* 단, 보더에 대한 정의없으면 선은 없음 */
+header{
+ color: blue;
+ background-color:yellow;
+ padding:10px;
+}
+nav{
+display: table-cell; /* table-cell은 table의 <td>로 결국 float:left역할 */
+color:red;
+background-color:pink;
+width:20%;
+}
+section{
+display:table-cell;
+color:yellow;
+background-color:blue;
+width:70%;
+}
+aside{
+display:table-cell;
+color:#00FF00;
+background-color:#FF0090;
+width:10%;
+vertical-align:baseline;
+}
+footer{
+color:#FFFF00;
+background-color:#00FF00;
+}
+</style>
+
+</head>
+<body> <!-- 아 이건 html5의 semantic web 방식이구나 why? header, nav를 보고 -->
+<header> <h1>과일 주문</h1></header>
+<div>  <!-- footer하고 header빼고 전부 div로 묶었음  -->
+<nav><h1>메뉴</h1>
+<ul><li><a href="#">사과메뉴</a></li>
+	<li><a href="#">배메뉴</a></li>
+	<li><a href="#">감메뉴</a></li>
+</ul>
+</nav>
+<section>
+<h1>과일을 말씀드리면</h1>
+<article>
+<h1>가성비평가</h1>
+	가격대비 가성비도 맘에 들어요
+</article>
+</section>
+
+
+<aside>
+<h5> 과수원 광고 방송 </h5>
+<ul><li><a href="#">가자 방송으로</a></li></ul>
+</aside>
+</div>
+<footer><address>나는 과수원 주소구요</address>
+<p>주소는 종로구 종로동</p>
+<p>대표자명 : 김종로</p> 
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+
+c/s 모델- 시스템에 독립적 > web
+
+예) 카톡: client1- 해당 통신사를 거쳐-카카오서버- 상대방 해당 통신사
+를 거쳐서 -client2
+
+#########웹 프로그램에는 #################
+Client side: front-end, UI
+ html, css, javascript, jquery(javascript framework), ajax..
+ ㄴ UX designer / web designer/ front-end developer
+ 
+ 
+ server side: back-end, 서버에서
+  jsp, servlet...el,jst1....
+  ㄴ db관리자/ server 관리자/ back-end developer
+  
+  (참고) 스프링부트에서 타임리프
+  (참고) full stack developer
+  
+  
+ 
+####### JSP  vs   javascript
+#. javascript: cilent side "script" language
+		 ㄴ html + <script></script>
+		 예) html 문법
+		 		:
+		 	<script>
+		 				자바스크립트 문법을 신나게 사용
+		 	</script>
+#. JSP(Java Server Page) : server side "script" language
+		ㄴ html + <% 자바언어 %>
+	예)
+		html 문법
+			:
+		<%  ============>scriptlet(스크립트릿)
+			if()같은 자바 문법을 사용한다
+			
+		%>	
+		
+		
+(참고) back-end에서 서버 쪽은 원래 servlet을 사용
+	(applet, servlet을 함께 사용했던 시절이 있었음)
+	applet: client에서 실행되는 자바, 요즘에는 많이 안씀
+	servlet: 서버에서 실행되는 자바
+즉, 원래 servlet를 사용함
+ㄴ 그런데 이것 사용이 복잡하고 어려움
+why?
+jsp: html+ 자바를 추가
+servlet: 자바+ html을 추가
+				ㄴ 그래서 어렵게 느낀다
+		예) out.println("<h1>...</h1>");
+		==> 괄호안 문장을 서버에서 클라이언트로 전송하라는 뜻임
+		즉, 문장 전체가 자바로 구성된다.
+		
+		그러므로 servlet(웹자바)만 사용하다가 점차 jsp를 사용
+		그렇다면 servlet은 안쓰나요???
+		분명히 사용한다
+		
+
+###진행과정
+
+웹브라우저<---------->웹서버<----------->WAS<------------>DB
+		.html            .java .jsp                		
+		.jsp
+
+########
+참고)servlet은 .java--> .class --> 메모리 로딩==>실행
+JSP(.jsp, .html) -->servlet(.java) -->.class		
+		
+	
+-.jsp 내장객체 9가지
+out, request, response, page, session
+application, exception, config, pageContext
+
+-. 그렇다면 servlet은 객체 생성을 그때 그때 해야함
+예)  jsp의 request 객체를 servlet방식으로 활용하려면 
+	HttpServletRequest 클래스의 객체를 직접 선언하고 써야함
+		ㄴHttpServletRequest req1							
+				
+#####. ecu-kr     utf-8
+#. ecu-kr: 한글, 영어 모두 2바이트로 표현,
+				한글 2바이트로 한글이 많으면 메모리 사용이 비교적 적다
+#. utf-8: 영어 1바이트, 1919문자 2바이트
+			한글, 중국어, 일어등 3바이트
+			한글 3바이트로 한글이 많으면 메모리 사용이 비교적 많아진다
+	
+-. 한글 깨질때
+post 방식 복잡하지 않음
+
+get방식에서 jdk1.5 에서도 약간 복잡
+지금은 tomcat 서버에서 server.xml파일
+63 라인쯤 <Connector URIEncoding="EUC-KR" ==>이것 넣어줌
+connectionTimeout="20000" port="8082"  protocol="HTTP/1.1" redirectPort="8443"/>	
+			
+
+---------Socket Programming-------------
+-. Socket
+
+
+											
+						 					  

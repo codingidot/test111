@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var intBae1=new Array();;
+var intBae2=new Array(30,80.70);
+
+var intBae=[30,80,70] //배열잡고 + 초기치
+//do tou remember java? int [] aa={10,20}
+
+//자바에서 Arrays.sort()
+
+intBae.sort() //오름차순소트
+document.write(intBae+"<br>");
+
+intBae.reverse() //내림차순소트
+document.write(intBae+"<br>");
+
+var intBae7=[30,8,70]
+/* 위 배열을 오름차순으로 소트하시오 */
+  intBae7.sort();
+ document.write(intBae7+"<br>");
+ /*  해보니 30, 70, 8 뭥미??? 기본적으로 한자리가 비교기준(문자열비교방법) */
+
+ intBae7.sort(function(front, back){ //오름차순
+	return front-back;
+});
+document.write(intBae7+"<br>")
+
+ intBae7.sort(function(front, back){ //내림차순
+	return back-front;
+});
+document.write(intBae7+"<br>")
+
+ intBae7.sort((front, back)=>front-back); //오름차순 줄여쓰기, lamda식=arrow function expression
+ document.write(intBae7+"<br>")
+ 
+ intBae7.sort((front,back)=>back-front); //내림차순 줄여쓰기
+ document.write(intBae7+"<br>")
+ </script>
+
+
+</body>
+</html>

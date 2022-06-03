@@ -1,0 +1,231 @@
+####Program????
+
+예) 메모장 아이콘을 클릭하면 가동
+
+or 
+
+window.exe를 가동
+window key + R
+
+메모장실행파일등이 디스크에 들어있는 상태
+
+
+메모장이 떠있는 상태 
+### process(이것이 많으면 overhead)
+
+ctrl shift esc눌러서 나오는 앱들이 프로세스임
+
+
+메모장들이 디스케에서 실행되어 메모리에 올라온 상태
+
+1 program : 1 process
+
+.cgi
+
+###thread (=> TSS: Time Sharing System)시분할시스템
+
+기본 1 program: 1 process : 1 thread
+
+
+-.Multi Thread (TSS: Time Sharing System, 시분할방식)
+1 process- 둘이상의 Thread 가 동시 수행
+기본적으로 처리순서는 없음
+
+context switching(문맥교환)이 이루어짐
+작업하던 쓰레드를 어디까지 했는지 기억창고에 저장하고 다른 쓰레드록 가고
+이런 것들이 않으면 느려질수 있다.
+예) 잔치날 여러식구들이 음식 만들기 (도구는 돌아가면서 사용)
+ATM 단말기 사용하기
+
+
+-. 메모리와 쓰레드
+<Process>
+
+heap, code, static, stack 메모리
+
+<Thread가 들어가면>
+(Thread끼리 메모리 공유부분) heap, code, static
+(비공유부분) 1 Thread당 1 stack를 가짐
+
+-. Thread 처리과정
+
+JVM이 여러 쓰레드중 1 쓰레드 선택하여 CPU선점(가상 CPU)
+--> run() 가동 (Thread클래스의 메소드) ---> 종료
+
+-. 쓰레드가 되게 하는 클래스 만드는 2가지 방법
+1) java.lang.Thread 클래스를 상속:
+다른 클래스와 상속이 특별히 요구되지 않는 경우,
+이때 상속으로 인해 원치않는 메소드까지 상속받는 경우 발생이 단점
+
+2) java.lang.Runnable인터페이스 상속:
+다른 클래스와 상속관련이 되어 있는 경우
+==>이왕이면 Runnable 사용하면 좋다.
+
+
+### 클라이언트 vs 서버
+
+iso: internatinoal standard organization
+	(국제표준화기구)
+osi: open system interconnection
+	=> global 통신규약 (protocol)
+	
+osi 7 layer(계층)
+LAN: local area network
+WAN: wide local area network
+internet
+
+###자바 --> c#
+
+자바를 돌릴려면 jvm jre가 있어야한다면 c#을 사용하려면
+닷넷이 있어야한다.
+
+닷넷=detNet= .net
+=> ip address  +  network
+어떤 os + 어떤 language+ 어떤 device에 상관없이 돌아가게 
+만들자는 의미
+
+-. 네트워크: 근거리 및 원거리 사이의 컴퓨터 연결을 통해
+		데이터를 통신하는 망으로 데이터 공유가 가능
+		IPv4
+				ip 주소 예 187.34.2.35
+				
+				
+Application layer	
+presentation layer	
+Session layer	
+Transport layer	
+Network layer	
+Datalink layer	
+Physical layer				
+	
+	<osi layer간 데이터 전송시>
+	
+	* 캡슐화, 디캡슐화: layer 전송시마다 header,
+	footer가 부여 신뢰성 보장 및 각 layer에서 인식가능하도록 함
+	(capsulation, decapsulation)
+	------------------------------------
+	원본 [data]                 상대방[data]
+	    data p                p    data
+	         ps              sp
+	         pst            tsp
+	         pstn          ntsp
+	         pstnd        dntsp
+    -------------케이블타고가서--------------
+   protocol data unit => 데이터 전송단위(PDU)
+   
+   <상부단계 부터 보면 >
+   
+   user
+     |
+   #.1) Application Layer(data,Message: A=PDU): (응용계층)
+   user에게 network리소스에 대한 서비스를 제공 즉, email, 파일 전송 등의 서비스를 제공,
+   http, ftp 등의 프로토콜
+   (hypertext transfer protocol)(file transfer protocol)
+   
+   
+   #.2) Presentation Layer(data, Message:P-PDU):(표현계층)
+   네트워크의 다양한 데이터 표현 방법들을 하나로 통일시키는 역할로
+   입출력데이터를 하나의 표현으로 변환하는 역할등을 말한다
+   (이를 위해 encoding, decoding 등을 수행)
+   
+   http... name= %e%3
+   
+   #.3) Session Layer(data,Message:S-PDU):연결을 안정적으로 유지하거나
+   처리완료후 연결을 종료하는 역할 (TCP/IP 세션을 생성하거나 종료시키는)
+   
+   #.4) Transport Layer(segments:T-PDU):
+   장비사이에 안정적인 통신보장(신뢰성전달보장이 목적, 전체 데이터를 잘 전송)
+   data를 적절히 분할하고 이를 segment라고 함
+   또한 Network Layer의 요구에 맞게 segment데이터에 소스 ip,
+   목적ip를 붙여 패킷화 한다.
+   상방향일때는 패킷을 조립하여 원래의 데이터로 만든다,
+   	(TCP:전화)(UDP:편지, 방송, 동영상) :
+   				등기우편
+   				
+   TCP/UDP protocol
+   		ㄴ tcp: transmission control protocol
+   		ㄴ udp: user datagram protocol
+   		
+   	
+   	#.5) Network Layer(packet:N-PDU)(IP) :
+   	router기능, packet을 순서대로 전달,
+   	packet을 해당 "목적지"까지 전달
+   	(정확한 목적지냐가 목적), IP protocol
+   	
+   	==> 4, 5번을 TCP/IP
+   	
+   	#.6)Data Link Layer(frame:DL-PDU) :
+   	Network Layer의 packet을 오류검사하며
+   			bit모음인 frame 단위로 만듬, Ethernet(이더넷) 프로토콜
+   			
+   			0100001  ==> 0100000(Odd Parity even ...)
+   			
+   *이더넷	: 각 컴퓨터가 갖고 있는 고유의 MAC(Media Access Control) address(48비트)로
+   데이터 전송 및 수신이 가능, 데이터 전송시 컴퓨터간 동시 전송으로 충돌시 
+   임의 시간동안 멈추었다가 다시 보냄
+   
+   (참고) mac 주소 확인하기(IP주소는 변경가능한 주소)
+   시작-실행-cmd- ipconfig/all  --> 물리적주소   80-32-53-D2-02-C5				    
+     
+	#.7) Physical Layer(bits: PH-PDU) :
+	twist cable, 전압등 체크, bit 단위로 전송됨
+	(전송은 데이터> 데이터> 데이터> segment> 패킷> >프레임> bit로 되어 전송)
+	
+	
+	*Domain Name(www.naver.com같은 영문이름)을 숫자주소로 변환
+	user
+	http://www.naver.com  - DNS - http://128.34.56.72 -->DNS(Domain Name Server)가 개입해서 영어주소를 숫자로 바꿔줌
+	http://128.34.56.72 ---------- http://128.34.56.72
+	
+	내 컴퓨터- 영문자 주소 -- IP 숫자주소로 해석 --- 목적지 컴퓨터
+						www.naver.com  123.12.22.33 네이버서버 컴퓨터
+						
+	IP Address
+	--특히 네트워크에서 컴퓨터를 구분하기 위한 컴퓨터 고유주소
+	--32비트, 0~255 사이의 10진수 4개, 구분자는 .(점)
+			예) 0.0.0.0 부터 255.255.255.255 (IPv4)
+			여기서 내 컴퓨터(localhost) 주소는 127.0.0.1
+	-- 약 40억 여개 주소 사용가능
+	
+	참고) IoT(Internet of Things)
+	IoT 때문에 주소가 모자를 수 있다 그래서 IPv6
+	
+	
+	port.NO: 한 컴퓨터내에서 프로세스 구분번호
+	--사용방법: 주소: 포트번호 (예:198.1.23.22:5678)
+	--16bit(65535개 사용가능)
+	--사용가능 숫자 중 앞번호들은 특정번호에 사용
+	20,21(FTP),23(talent) 80(http)....
+	
+	(참고) ICANN이 나눈 포트번호 범위
+	ICANN은 국제 인터넷 주소관리기구로
+	Internet Corporation for Assigned Names and Numbers의 약어
+	
+	0-1023 : ICANN이 관리
+	1024-49151: Registered Port라고 하나 관리제한 없음
+	49152-65535: Dynamic port로 사용가능
+	(short -32768~+32767  0~65535)
+	
+	(참고) IP주소: 집주소, port: 안방 ... 건넌방
+	
+			
+	###### TCP/IP
+	-. TCP/IP 모델은 OSI의 변형판으로 "인터넷"의 구조를 의미
+	(TCP는 패킷을 신뢰성(데이터)있게 꼼꼼히 처리 /IP는 패킷을 정확한 위치(목적지)에 빨리 전송
+	
+	A+P+S(Application,Presen..) --->Application
+	Transport---> 그대로 Transport(TCP, 신뢰성전달을 위해 패킷나눔 및 조립실시)
+	Network ---> 그대로 Network(IP, 정확한 목적지로 전송)
+	D+P ---> NetworkInterface
+		
+		즉, 7단계가 4단계로 변형 표시함
+		
+		
+	--------------socket Programming-----------
+	-. socket: Client Program과 server program이
+	상호 통신시  Network상의 통신 접속점
+	즉, 네트워크 상의 송수신은 socket 통하여 이루어진다
+	
+	참고) socket > websoket > stomp	
+			
+						

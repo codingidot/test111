@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<style>
+	table{font-size:30px;}
+</style>
+</body>
+
+<table border=2>
+	<tr> <td>오늘의 이벤트 당첨자</td><td>홍길동</td></tr>
+	<tr> <td>오늘의 이벤트 당첨자</td><td>이도령</td></tr>
+	<tr> <td>오늘의 이벤트 당첨자</td><td>성춘향</td></tr>
+	<tr> <td>다음 이벤트 날짜</td><td>수요일 오전</td></tr>
+	<tr> <td>신나는 이벤트 행사</td><td>푸짐한 상품을 드립니다</td></tr>
+	<tr> <td>참여!!!</td><td>참여!!!</td></tr>
+</table>
+
+<script>
+$(function(){
+	$("tr:nth-child(4n+1)").css("background","red");
+	//1,5,9 //n=0,1,2,3,....
+	$("tr:nth-child(4n+2)").css("background","orange");
+	//2,6,10
+	$("tr:nth-child(4n+3)").css("background","green");
+	//3,7,11
+	$("tr:nth-child(4n)").css("background","cyan");
+	//4,8
+})
+
+</script>
+</html>

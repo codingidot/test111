@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제목은 웃는표정˃ᴗ˂</title>
+<script src = "js/jquery-3.3.1.js"></script>
+<script>
+$(function(){
+        var urlArray1 = [        // new Array()  // var arr1 = [ ]
+                {key : "네이버~~", value : "http://www.naver.com/"},  //JSON객체 //name : value
+                {key : "구글!!" , value : "http://google.com/"}
+        ]
+        
+        /*-------------------------
+        위처럼 준비되었으면 $.each 사용하여 프로그램 작성
+        $.each(배열 또는 객체, 함수(배열 또는 객체의 key, 배열 또는 객체의 value))
+        $.each = for (var aa in 객체들)
+        --------------------------*/
+        
+        $.each(urlArray1, function(index,kab1){
+                var str1 = "";
+                str1 += '<a href ="'+kab1.value+'">'
+                        +'<h1>'+kab1.key+'<h1></a>'+'<br>'; //처음에는 naver
+                        // <a herf = "http://www.naver.com">
+                        //        <h1>네이버</h1></a><br>
+                        // 여기까지 a tag 만들어짐
+                document.body.innerHTML += str1;   //body 태그공간   //<body>안에 a tag 줄이 들어감
+        }); // $.each_function -- end
+        
+        
+}); // $(funtion()) -- end
+</script>
+
+</head>
+<body>
+        <!-- 
+        <a href = "http://www.naver.com/">네이버~~</a><br>
+        <a href = "http://www.google.com/">구글~~</a><br>
+         -->
+         
+         <!-- 위 스크립트로 인해이 들어간 효과가 나타남
+         즉, 위의 jQuery 프로그램은 바로 <a>태그등을 직접 코딩하여 body에 붙여넣은것같다.
+          -->
+
+</body>
+</html>

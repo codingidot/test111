@@ -1,0 +1,22 @@
+package com.haeva.my;
+
+import java.io.UnsupportedEncodingException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import telinfoDAO.TelInfoDAO;
+
+public class HeavaGetAllInfo implements HaevaImpl {
+
+	@Override
+	public void haeva(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		
+		TelInfoDAO tidao1=null;
+	}
+	
+
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>		<!-- 유니코드(2바이트) -->
+<meta charset="EUC-KR">  <!--utf-8-->
+		<!-- charset set :한글처리, utf-8(영어:1바이트, 한글:3바이트, 1919문자 2바이트) -->
+<title>비안옴</title>
+</head>
+<body bgcolor="yellow" text="blue"> <!-- css가 tag에서 사용될때 -->
+<h1>아하~~~~~</h1>
+
+<font color="red" size=10> 오늘 비오는 감:D</font> <br>
+	
+	아 그렇구나 <br>
+	
+	역시 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 역시 그렇구나 <br>
+
+	<!-- 이렇게 br 태그를 xhtml형식으로 써도 에러 안남 -->
+	그래&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요???? <br/>
+	그래&nbsp; &nbsp; &nbsp; 요??? <br/>
+			<!--  &ndsp;의 비연속 빈칸은 인정함, 연속빈칸이 인정안되는 것임 -->
+			그래               요    <!--  이렇게 연속된 빈칸은 인정 x-->
+
+글자에 뭔짓을 한거야
+<b>어느 구름에서 비올지 몰라</b><br> <!-- bold -->
+<i>어느 구름에서 비올지 몰라</i><br> <!-- italic -->
+<blink>어느 구름에서 비올지 몰라</blink> <br> <!-- 이전 IE8, 사용안함 -->
+<strike>어느 구름에서 비올지 몰라</strike> <br> <!-- 취소선 -->
+<u>어느 구름에서 비올지 몰라</u> <br> <!--underline-->
+<code>어느 <sub>구름에서</sub> <sub>비올지</sub> 몰라</code><br>
+											<!-- typing글씨체 -->
+<code>y=x<sup>2</sup>+log<sub>2</sub>10</code><br>
+		
+<!-- H태그: 글씨크기, 자동 줄바꿈	 -->
+<h1><code>제목과 내용을 크기를 다르게</code></h1>										
+<h2>제목과 내용을 크기를 다르게</h2>	
+<h3>제목과 내용을 크기를 다르게</h3>
+<h4>제목과 내용을 크기를 다르게</h4>
+<h5>제목과 내용을 크기를 다르게</h5>
+<h6>제목과 내용을 크기를 다르게</h6>											
+
+<p align="center"> 내가 정기고처럼 노래를 부르면 <br>
+너는 소유처럼....(written by 길탱) </p>
+
+<p align="right"> 내가 정기고처럼 노래를 부르면 <br>
+너는 소유처럼....(written by 길탱) </p>
+
+<p align="left"> 내가 정기고처럼 노래를 부르면 <br>
+너는 소유처럼....(written by 길탱) </p>
+
+<center>
+삶이 그대를 속일지라도 <br>
+슬퍼하거나 노여워 말라(푸쉬킨)<br>
+</center>
+
+<pre>
+<h1>
+나정이와 쓰레기가 나오는 것은 웅4
+서인국과 정은지가 주인공인 것은 웅7
+웅8에서는~~~~~~~</h1>
+</pre>
+
+<!-- 자바에서 글자가 지나가게 하는 것 예로, 여기는 종로3가역입니다
+문자열.substring(), gui로 작성해야 -->
+
+<marquee direction="left"><font color="green" size=15><h1>다음역은 종로3가</h1></font></marquee>
+<marquee direction="right"><h1>다음역은 종로3가</h1></marquee>
+<marquee behavior="alternate"><h1>다음역은 종로3가</h1></marquee>
+
+
+<!-- behavior: marquee area 범위 -->
+<marquee direction="right" behavior="scroll"><h1>다음역은 종로3가</h1></marquee>
+<marquee direction="right" behavior="slide"><h1>다음역은 종로3가</h1></marquee>
+
+<!-- pixel: picture element
+50 pixel씩 스크롤 된다는 것, pixel이 크면 속도가 빠름 -->
+<marquee  behavior="scroll" scrollamount="50"><h1>커피 1+1 행사, 조금 있으면 행사끝~~</h1></marquee>
+
+<!-- css가 html tag에서 사용시 -->
+<marquee width=800 height=200 bgcolor="pink" behavior="scroll" scrolldelay=50>
+<!-- 스크롤 가로세로 영역 스크롤 이동속도 50*(1/1000초)
+즉, 50ms마다 스크롤 발생 -->
+<h1>커피 1+1 행사, 조금있으면 행사끝</h1></marquee>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+websocket개요
+실시간 연결의 sns 프로그램, 실시간 동영상 스트리밍, 온라인 게임등을 위해 사용
+예) 쇼핑몰에서 실시간 상담
+
+###. 여러가지 통신 기술(http는 stateless(connection less)
+
+#. polling 방식 (Ajax polling방식: 타이머 및 xml 사용)
+-. http 원리가 client to server 로만 request 되므로
+  client에서 지속적으로 server에 http request하여 업데이트가 있는지 확인하며 response를 받는 방식
+  (client는 일정한 주기로 request를 보냄)
+-.클라이언트가 많을 경우 서버 overhead 발생
+  또한 서버에 변경이 없을 경우라도 request마다 response하게 되므로 필요없는 작업이 발생
+  cf. C언어의 경우에는 채팅 기법자체이름이 polling 방식 이 있음
+
+
+
+
+#. long polling 방식
+-.클라이언트에서 서버로 http request후 서버가 데이터 변경시까지 대기하다 response를 주고 
+  클라이언트가 받으면 받자마자 다시 서버로 http request하는 방식
+-.실시간 response 가 가능
+-.클라이언트가 많을 경우 서버 overload 발생
+
+
+
+#.steam 방식
+ -.클라이언트에서 서버로 http request 후 request를 유지시키고 response를 지속적으로 받는 방식
+ -. request의 유지가 문제 
+ 
+ 
+ -------------------------------------------------
+ #. HTML5에서의 websocket API의 등장
+ -.http request로 handshake
+ 	(http==>websocket으로 변경)
+ 	변경과정: 브라우저가 서버에게 요청(header에 upgrade에대가
+ 	websocket을 실어서 보냄, 서버는 아하 변경하려고 하는 구만
+ 	즉, http에서 tcp/ip로 변경)
+ 	
+ -. 그러므로 Statelesee로 작동하는 http와는 달리 접속시작은 http를 사용하고 그후 websocket규약에
+    의해 작동됨 (http:80    https:433 포트)
+ -. 특정한 port를 통하여 Stateful로 작동하므로 언제나 양방향(duplex) 통신 가능
+ 	(기존의 http는 클라이언트가 요청을 보내고 서버가 응답하는 one-way 통신)
+ 	
+ 	   Stateless는 접속하닥 접속이 끊어지고 Stateful은 계속 연결이 이어지는것
+ -. server side의 data 변경시 client에서 변경되는 것이 가능해짐
+ 	(기존의 http는 서버쪽이 변경되어도 자동으로 클라이언트에 반영되지 않음
+ 	(참고) websocket 작동하기 (http는 다른 client의 요청이 없으면 응답할수 없음)
+ 	client---------server로
+ 	서버는 다른 client로 전송---------client
+ 	시작은 http, 그리고나서 그후로 그다음에 websocket으로 변경되어 양방향 전송이 가능
+ 	(참고)발전과정
+ 	http > ajax > websocket 	
+ 	
+ 	
+ 	
+ 	시험 osi와 dns    자바소켓과 웹소켓 채팅하는거, 자바스크립트 1대1 채팅(클라이언트와 서버중 하나 써주고 나머지 쓰시오)
+ 	
+ 	피피티 2개 계획서 동영상     
+    	
+    	조동현 // 방 생성 -> 방장
+조동현 // 방 입장 + 방 인원 목록 갱신 -> 2~4p

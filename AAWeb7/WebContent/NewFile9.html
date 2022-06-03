@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+window.onload=function(){
+	var joongang1=new google.maps.LatLng(37.5879335,126.9115049);
+	//해당 위도,경도를 지도의 중앙으로 위치하기 위한것
+	
+	var mapDesign1={
+			zoom:25,
+			center: joongang1,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+			//mapTypeId:google.maps.MapTyoeId.HYBRID
+	};
+	var map=new google.maps.Map(document.getElementById("jido1"),mapDesign1);	
+}
+</script>
+</head>
+<body>
+<div id="jido1" style="width:700px; height:700px">
+	이안에 지도 너있다.
+</div>
+
+</body>
+</html>

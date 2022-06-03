@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+*{margin:0; padding:0;}
+
+/* 반응형웹 media query,  static web(정적인 웹) */
+
+/* all: 모든 미디어 */
+@media all and (min-width:300px){
+	/* and 추가조건, 브라우저 width가 300px 이상이면 이걸로 */
+	#mq1 img{width:100%;}
+}
+@media all and (min-width:768px){
+	#mq1 img{width:50%;}
+}
+@media all and (min-width:1000px){
+	#mq1 img{width:25%;}
+}
+
+div{font-size:0;}
+</style>
+</head>
+<body>
+<!-- 우리는 bootstrap.jar로 반응형 웹을 만든다 -->
+<h1 align="center">학점계산</h1>
+<div id="mq1">
+	<img src="./krim/spring.jpg" width=200 height=200>
+	<img src="./krim/summer.jpg" width=200 height=200>
+	<img src="./krim/fall.jpg" width=200 height=200>
+	<img src="./krim/winter.jpg" width=200 height=200>
+</div><br>
+
+<form method="post" action="hello.jsp">
+이름<input type="text" name="irum"><br>
+점수입력<input type="text" name="irum"><br>
+<input type="submit" value="가자서버로">
+<input type="reset" vlaue="취소">
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>kakaomap</title>
+<!--<script src=" //dapi.kakao.com/v2/maps/sdk.js?appkey= 자바스크립트키"-->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f9d2864e1f7f00d3866b1233977c030">
+</script>                                       	
+<script>
+window.onload= function(){// IE나 CHROME중 더 정확한값 넣기
+
+        var joongang1 = new daum.maps.LatLng(37.5879353,126.9115092);
+                //해당 위도,경도를 지도의 중앙으로 위치하기 위한것
+        
+        var mapDesign1 = { zoom: 15, //json- 속성: 값
+                center: joongang1,
+                mapTypeId: daum.maps.MapTypeId.ROADMAP
+                //mapTypeId: daum.maps.MapTypeId.HYBRID   //둘 중 하나 택
+};
+		//    /https://apis.map.kakao.com/web/simple
+        //마커가 표시될 위치
+        var map = new daum.maps.Map(document.getElementById("jido1"),mapDesign1);
+   
+        var markerPosition=new kakao.maps.LatLng(37.5879353,126.9115092);
+        //마커를 생성
+        var marker=new kakao.maps.Marker({
+        	position:markerPosition
+        });
+        //마커가 지도 위에 표시되도록 설정
+        marker.setMap(map);
+        
+}
+</script>
+</head>
+<body>
+<div id="jido1" style="width: 700px; height:700px">
+여기에 지도나온다</div>
+
+
+</body>
+</html>

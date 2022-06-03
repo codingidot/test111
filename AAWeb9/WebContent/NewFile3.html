@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body >
+<!-- setTimeout() 을사용하면 한번만 실행이됨
+계속 반복시키려면
+(1) setTimeout을 재귀호출
+    예) function kaja(){
+        문장들;
+        setTimeout('kaja()', 5000)
+    }
+    
+   또는
+ (2) setInterval()을 사용
+ 예) setInterval('kaja()',5000)
+ 	function kaja(){
+ 	문장들;
+ 	}   
+ 	
+ 	그렇다면 jQuery는 (2)번 방법으로 준비해놓음
+ 	-->
+ 	<h1>우리건물에는 키즈카페 커피숍 햄버거카페가 있습니다</h1>
+ 	<img id="jpg1", src="images/apple.jpg">
+ 	<img id="jpg2", src="images/coffee.jpg">
+ 	<img id="jpg3", src="images/melon.jpg">
+<script>
+$(function(){
+	$("img").css("width",100);
+	$("img").css("height",100);
+	setInterval(function(){
+		$("img").first().appendTo("body");
+	},2000); //2초 간격으로 function함수를 수행
+	
+});
+	//setTimeout(): 1번만수행
+
+</script> 	
+ 	 
+</body>
+</html>

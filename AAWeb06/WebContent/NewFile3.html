@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+        <script>
+                function comeout() {
+                        var krim=document.createElement("img"); //DOM <img
+                        krim.setAttribute("src", "fish.jpg");//<img src="./pic.."
+                        krim.setAttribute("id", "foxfox");
+                                                                //<img sre="./pic..." id="foxfox">
+                        document.form1.appendChild(krim);
+                        //추가된 여우그림이 화면 여우, 기린그림 다음에 append
+                        //JAVA GUI : add()
+                }
+                
+                function hide() {
+                        if(document.getElementById("foxfox"))
+                                var f=document.getElementById("foxfox")
+                                f.parentNode.removeChild(document.getElementById("foxfox"));
+                }
+        </script>
+</head>
+<body>
+        <form name=form1>
+                <img src="fish.jpg" onclick="comeout()">
+                <img src="smile.jpg" onclick="hide()">
+                <!-- <img ...> -->
+        </form>
+</body>
+</html>

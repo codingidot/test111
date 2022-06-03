@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<input type="text" id="irum" value="평강공주님! 보세요">
+	<!-- 입출력이 둘다가능 -->
+
+<!-- jQuery
+	width, height==> attr() 속성의 경우, attr("width", 200)
+	value==>val(), val(내용)
+	
+	 -->
+	 
+<script>
+$(function(){
+	alert($("#irum").val()); //getValue
+	$("#irum").val("소개합니다..."); //setValue
+});
+</script>	 
+</body>
+</html>

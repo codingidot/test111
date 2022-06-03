@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script src="js/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+<h1 id=hh1> 어서와 jQuery는 처음이지~~~</h1>
+<h3 id=hh2>음 그래~~~~</h3>
+<h2 class=hh3>jQuery는 처음일걸~~</h2>
+<h1 id=hh5>열심히 배우자~~~</h1>
+<script>
+//원래 css는 <style></style> 태그로 디자인이 기본
+//(1) <body onload=
+//(2) window.onload=function...
+//(3) $(document).ready(function(){ 내용});
+//(4)  $(document).ready=====>$()
+//   그러므로 $(function(){내용});으로 됨
+//window.onload=function....
+$(function(){ //jQuery의 시작
+   //document.getElemenyById  //css()는 jQuery에서 만든 메소드	
+	$('*').css('color','red'); // $('h1').css('color','red');
+	$('#hh2').css('color', 'blue');
+	//document.getElementById('#hh2')
+	$('.hh3').css('color','green');
+});
+</script>
+
+</body>
+</html>

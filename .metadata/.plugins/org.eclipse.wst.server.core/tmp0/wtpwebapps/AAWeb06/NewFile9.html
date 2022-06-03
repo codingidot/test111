@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+/* ##큰메뉴 디자인 */
+.menu1{cursor:pointer; color:blue;
+		background-color:pink; font-size:20pt;}
+/* ##작은메뉴 디자인 */
+.menu2{color:red; background-color:yellow; font-size:10pt;}		
+</style>
+<script> /* bada는 document.getElementById('somenu1')를 받음 */
+
+function kaja(bada){ /* 메서드 2형식 정의문 */
+	/* bada는 document.getElementById('somenu1')이므로
+	if(document.getElementById('somenu1').style.diaplay=="none") */
+	var somenu1=document.getElementById('somenu1')
+	somenu1.style.display="none"
+	
+		var somenu2=document.getElementById('somenu2')
+		somenu2.style.display="none"
+		
+			var somenu3=document.getElementById('somenu3')
+
+			bada.style.display="block"
+}
+</script>
+</head>
+<body>
+<br><br>
+<div class="menu1" id="bigmenu1"
+ onclick="kaja(document.getElementById('somenu1'))">
+CEO
+</div>
+<!-- display:none-있는데 숨기겠다, display:block-숨긴거 보이게 -->
+<div class="menu2" id="somenu1" style="display:none">
+
+<ul>
+	<li><a href="#">CEO소개</a>
+	<li><a href="#">CEO인사말</a>
+</ul>
+</div>
+ <!-- toggle 방식(one touch방식)
+ 소매뉴가 보여?
+ 응 그러면 숨겨
+ 아냐 그러면 보이게해
+ 예) 전기스위치
+ 지금 on이야??
+ yes면 off
+ no면 on -->
+
+<div class="menu1" id="bigmenu2" 
+onclick="kaja(document.getElementById('somenu2'))">
+회사소개및연혁
+</div>
+
+<div class="menu2" id="somenu2" style="display:none">
+	
+<ul>
+	<li><a href="#">회사소개</a>
+	<li><a href="#">회사연혁</a>
+</ul>
+</div>
+
+<div class="menu1" id="bigmenu3" 
+   onclick="kaja(document.getElementById('somenu3'))">
+   주요사업</div>
+   
+  <div class="menu2" id="somenu3"  style="display:none">
+    <ul>
+    <li><a href="#">AI</a>
+    <li><a href="#">서버</a>
+    </ul>
+   </div>  
+</body>
+</html>

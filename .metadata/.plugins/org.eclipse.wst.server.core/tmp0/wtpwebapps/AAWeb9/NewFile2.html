@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<h1>미나리 수상소감 최고~~~~</h1>
+<h2>나도 동감이야!</h2>
+
+ <!-- 이거말고
+ 
+ 
+ 이걸 실행하면 뭐가 나오나요?
+ 
+ 여기에
+ 
+ 나도 동감이야!
+ 
+ 라는 문장이 추가되어 나오도록 jQuery로 작성하시오 -->
+<script>
+$(function(){
+	$("<h2>나도 동감이야!</h2>").appendTo("body");
+	//나도 동감이야 가 body 안 끝에 들어가면서 append됨
+	
+	//$("body").append("<h2>나도 동감이야</h2>");
+				//body 끝에 나도 동감이야 가 append 됨
+	
+});
+
+</script>
+</body>
+</html>

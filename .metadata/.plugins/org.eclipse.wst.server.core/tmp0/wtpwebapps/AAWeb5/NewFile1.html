@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> <!--  4월27일 -->
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function kaja(){
+document.write("안녕 자스4");
+//웹페이지 로딩중에는 먼저 출력, BUT 다운로딩된후에는 먼저 것 다 지우고 출력
+alert("안녕 자스 4구만");
+document.write("안녕 자스 4-2");
+alert("안녕 자스 4-2구만");
+}
+function yokeoman(){
+document.write("<h1>요거만</h1>");	
+
+}
+</script>
+</head>
+ <body onload="yokeoman()"> <!-- 페이지가 닫힐때는 onunload -->
+나도 글자다1          <!--  이벤트="이벤트 처리함수();
+					onclick: 자스이벤트
+					따옴표 사용주의 -->
+<input type="button" value="눌러봐~1"  onclick="alert('나도안녕');">
+<input type="button" value="눌러봐~2"  onclick="kaja();">
+		<!-- 주의: <script>태그없음 why? 자스이벤트 in html -->			
+나도 글자다2
+</body>
+</html>

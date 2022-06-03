@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<!-- mouseover / mouseout
+ㄴ remembeer: event flow(capture/target/bubble)
+ㄴ 부모/자녀요소에 각각 작동
+
+mouseenter/ mouseleave
+ㄴ자녀요소에 관계없이 한번만 -->
+
+
+<body>
+<h1>여기에 들어오고 나가는 것은 hover로</h1>
+<h2> mouseover야?</h2>
+<h3>나는 어디에</h3>
+
+<script>
+$(function(){
+	$("h1").hover(function(){
+		$(this).css("background","yellow");
+	
+	},function(){
+		$(this).css("background", "pink");
+		
+	});
+	
+	//----------------------
+	$("h2").mouseover(function(){
+		$(this).css("color","red");
+	});
+	
+	//---------------------------------
+	$("h2").mouseout(function(){
+		$(this).css("color","green");
+	});	
+	
+	//-----------------------------
+	$("h2").click(function(){
+		$(this).remove();
+});
+});
+</script>
+</body>
+</html>

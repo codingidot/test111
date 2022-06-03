@@ -1,0 +1,21 @@
+html css javascript jQuery Ajax jQuery+Ajax
+#############Ajax(Asynchronous javascript+xml): 비동기 통신 ######
+
+#. 페이지가 바뀜이 없이 서버와 통신(background통신)
+(구글맵, 쇼핑물의경우 장바구니에 넣을때 해당 페이지 아래부분으로 드래그하는 경우)
+
+#.주로 많이 보는 것이 아이디 중복체크
+
+-. 일반 통신(동기)
+보내고 받고 보내고 받고
+
+-.비동기 통신(background 통신)
+보내면서 동시에 받는게 진행되고 받으면서 보내는게 진행
+
+
+#. ajax  flow
+
+      --request --->                        ------->
+client               xhr객체(XMLHttpRequest)           server
+      <--response---                       <----------                          
+

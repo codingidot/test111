@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+        <style>
+                h1{
+                        color:red;
+                        text-align:center;
+                        text-decoration:underline;
+                }
+                /*overline(윗줄), line-through(취소선)*/
+                
+                p { color:blue; font-size:30pt;}
+                
+                .redred {color:red;} /*클래스 (.을 붙임, 자바 클래스와는 1도 안같음)*/
+                        /* class=redred가 붙어있는 태그의 디자인은 이렇게 */
+                
+                        /* id=myid*/         /*굴림, 바탕*/
+                #myid { color:green; font:bold 20pt serif, sans-serif;}
+                
+                /*font에서의 순서는 font-style font-size font-family,,,순*/
+                        /*  id=myid가 붙어있는 태그의 디자인은 이렇게*/
+        </style>
+</head>
+<body>
+        <!-- div.redred -->
+        <div class="redred">무슨 색?</div>
+        
+        <!-- div#myid -->
+        <div id="myid">id로 디자인</div>
+        
+        <h1>난 red이다</h1> <!-- 글자 가운데 정렬 -->
+        <h3 style="color:violet;">난 보라색</h3>
+                                        <!-- html에 직접 디자인 한 css -->
+        <p> 이것은 단락이며 크기는 30</p>
+</body>
+</html>

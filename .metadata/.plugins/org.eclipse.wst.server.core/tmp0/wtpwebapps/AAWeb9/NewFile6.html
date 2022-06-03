@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+<style>
+/* .fsize1{font-size:50px;} */
+.fsize0{color:red; background-color:blue;}
+.fsize1{color:pink;background-color:brown;}
+.fsize2{color:blue;background-color:cian;}
+.fsize3{color:cian;background-color:orange;}
+.fsize4{color:yellow;background-color:red;}
+.fsize5{color:green;background-color:brown;}
+.fsize6{color:green;background-color:yellow;}
+.fsize7{color:green;background-color:orange;}
+.fsize8{color:green;background-color:blue;}
+
+</style>
+</head>
+<!--  Q)메뉴 글자색 모두 blue로 출력하시오
+ ==> $(#1).css("color","blue") -->
+<body>
+<h1>맛집메뉴</h1>
+<div id=d2>
+	<ul id=ul2 class=ul2>
+		<li id=1><b>불백</b></li>
+		<li id=2>파스타</li>
+		<li id=3>피자</li>
+	</ul>
+</div>
+<div id=d3>
+	<ul id=ul3 >
+		<li id=11>김치전</li>
+		<li id=22>파전</li>
+		<li id=33>녹두전</li>
+	</ul>
+</div>
+<div id=d5>
+	<ul class=u15>
+		<li id=100>회덮밥</li>
+		<li id=200>냉면</li>
+		<li id=300>왕만두</li>
+	</ul>
+</div>	
+<script>
+//(1) 일반적인 방법
+//$("div").find("#22").text("두부전");// find는 child에서 찾음
+//$("div").find("#100").html("<h3>회냉면</h3>").css('color','red');
+
+//(2) 한꺼번에 할 수 있는 프로그램작성으로 하면: li 태그가 공통이므로 li를 활용
+//$(function(){
+//	$("li").css("color","blue");
+//});
+
+//(3) 반복형태의 프로그램작성으로 하면 -each()사용, eacg(function(){});
+$(function(){
+	//$('li').each(function(index1,content1){//for문
+	//	$(this).css('color','blue');
+	//});				//alert(index1)// 0,1,2...
+
+	$("div").find("#22").text("두부전");
+	$("div").find("#100").html("<h3>회냉면</h3>").css('color','red');
+	//$("div").find("#11").addClass("fsize1");
+
+	//css style에 있는 .fsize1 선택자를 의미함  즉,div 태그아래 
+	// child에서 id 11을 찾아서 50px을 적용함
+	
+	
+/* 	Q) 이 문제는 color를적용하되 반복문 사용이 요구됨
+	반복문: each(), css가 class로 작성되어 있고  마침 0,1,,,8까지 접미사가
+	each()는 0,1,2...로 변하는 index 인자사용이 가능
+	그러므로 jQuery에서 addClass()가 있고 each()사용하면???
+	즉, (1) 배경색을 만들어 놓는다.(style의 class 사용)
+	(2) 하나하나 적용x, each 반복문을 사용하여 배경색을 적용 */
+
+	$('li').each(function(index1){
+		$(this).addClass("fsize"+index1);
+	})	
+});
+
+
+</script>
+</body>
+</html>

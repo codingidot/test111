@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 외원번호 2자리를 입력받아 12 이상이 입력되면 "초록반으로 가세요" 
+라는 메시지창 출력, 10이상이면 노랑반, 다른 나이의 어린이면 파랑반으로 가세요
+를 출력하는 자바스크립트 프로그램을 작성하시오
+
+(hint)
+키보드 입력: Scanner==> window.prompt(),  객체.메소드() -->
+<script>
+var bb;
+var na2;
+na2=prompt("외원 번호 앞 2자리는",12)
+
+if(na2>=12){
+	alert("초록반으로 가세요")
+} else if(na2>=10){
+	alert("노랑반으로 가세요")
+} else{
+	alert("파랑반으로 가세요")
+}
+</script>
+
+</body>
+</html>

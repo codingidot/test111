@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<img id="jpg1", src="images/apple.jpg">
+ 	<img id="jpg2", src="images/coffee.jpg">
+ 	<img id="jpg3", src="images/melon.jpg">
+ <script>
+
+ $(function(){
+	 $("img").css("width",100);
+	 $("img").css("height",100);
+	 setInterval(function(){
+		 $("<img>")
+		 .attr("src","images/apple.jpg")
+		 .attr("id","foxfox").appendTo("body")
+	 	 .attr("width",100)
+	 	 .attr("height",100)
+	 },3000)
+
+ })
+ 
+ </script>	
+
+</body>
+</html>

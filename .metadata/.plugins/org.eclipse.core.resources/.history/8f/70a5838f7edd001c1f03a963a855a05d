@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% //scriptlet
+	String irum=request.getParameter("irum");
+	String jum1=request.getParameter("jum");
+	int jum=Integer.parseInt(jum1);
+
+String kaja=null;
+
+if(jum>=90)
+		kaja="A";
+else if(jum>=80)
+		kaja="B";
+else if(jum>=70)
+	kaja="C";
+else if(jum>=60)
+	kaja="D";
+else
+	kaja="F";
+
+
+
+
+
+
+%>
+
+
+</body>
+</html>

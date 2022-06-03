@@ -1,0 +1,39 @@
+<%@page import="tellinfoVO.TelInfoVO" %>
+<%@page import="java.util.ArrayList" %>
+<%@page import="telInfoDAO.TelInfoDAO" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>사원 전체 명단 </h1>
+<%
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        
+        TelInfoDAO dao = new TelInfoDAO();
+        ArrayList<TelInfoVO> list = dao.getAllInfo();
+%>
+
+<table border ="1">
+        <%for(TelInfoVO vo : list){ %>
+                <tr> <td>사원번호</td>
+                        <td><%= vo.getId()%></td>
+                </tr>
+                <tr><td>사원 이름 </td>
+                        <td><%= vo.getName() %> </td>
+                </tr>
+                <tr><td>연락처</td>
+                        <td><%= vo.getTel() %></td>
+                </tr>
+                <tr><td>입사일</td>
+                        <td><%= vo.getD() %></td>
+                </tr>
+        <%}%>
+</table>
+</body>
+</html>

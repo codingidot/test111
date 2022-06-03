@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 
+        자바스크립트
+          ㄴ 프로그램 담당
+        
+        마우스 움직이면 그림이 따라다니게 해야함
+        
+ -->
+
+
+<title>제목은 웃는표정˃ᴗ˂</title>
+<!-- 
+        이벤트                        이벤트핸들러(이벤트처리함수)
+  mouseclick                       onmouseclick
+  mousemove                        onmousemove
+        
+        
+        객체.속성 = 값
+        document.onmousemove => 지금함수로처리하세요!
+        
+ -->
+
+<script> /* 이 안에 있는 것은 모두 자바스크립트*/
+        // 객체.속성 = 값 ==> 객체.이벤트 = 이벤트처리함수(event handler)
+        document.onmousemove=function(){
+                
+                
+                //DOM(Document Object Model)
+                document.getElementById("f1").style.left = event.clientX+"px";
+                document.getElementById("f1").style.top = event.clientY+"px";
+                        /*f1을 위해 name="f1"을 사용하시나요 x*/
+                
+                //var f1 = document.getElementById("f1");
+                //f1.style.top = event.clientY+"px";
+        }
+        
+</script>
+</head>
+<body>
+
+        <h2>
+        <pre>
+        여기에 글씨를 쓰면
+        글씨가 나오는데
+        그 이유가 뭘까용
+        body안에 있는 글씨는 출력됨
+        만일 그림이 있으면 그림도 body안에 있으므로
+        출력됨
+        그리고 마우스 좌표를 말하는 x,y값은
+        기준이 0,0. 즉 절대좌표를 사용
+        
+        dom의 접근은 name이 아니라
+        id로 써야함
+        
+        </pre>
+        </h2>
+
+        <!--  그룹태그 -->
+                <!-- id=은 css # x -->
+        <!-- 접근을 위한 key word가 id --> <!-- 속성명:값; -->
+        
+        <span id="f1" style="position:absolute;">
+                <img src = "fish.jpg" border = "0" name ="krim">
+        </span>
+        
+        <!-- 
+                기본 접근방식
+                        javascript에서는
+                          (windows) > document > img ...
+                          
+                          document.krim.... 와 같이 계층적으로 접근하는것이 맞음
+                         
+                        DOM에서는 "모두 접근할거야!!˃ᴗ˂" 그러므로 계층구조가 아님
+                        
+                        netscape navigator  IE
+                        
+                                document.all << MS사가 만들엇슴. 이걸 사용하게되면
+                                
+                                표준을 제정하는곳이 잇는데, W3C에서
+                                        document.getElementBYId() 를 표준으로 recommend
+                        
+        
+         -->
+
+</body>
+</html>

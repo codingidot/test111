@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+function kaja(){
+	$.ajax({
+		url:"kaja1.jsp", /*  url: "hello.jsp", //open(method,url,async) */
+		data:{   //json(javascript object notation)
+			irum:"hong", //open, send, name:value
+			na2:35  //kaja.jsp?irum=hong&na2=35
+		},			//<input type=text,responseXML
+		dataType:"text", //responseText, responseXML
+		type:"get", //open
+		success:function(result1){
+			alert("응답받는 다는"+result1);
+		},
+		error:function(xhr1,status){
+			alert("에러상태:"+"\t"+xhr1.status); //statusText
+		}
+	});
+}
+</script>
+</head>
+<body>
+<h2>jQuery-Ajax 그러니까 $.ajax 라는</h2>
+<h2>$.ajax로 기본 Ajax처럼 프로그램 작성하기</h2>
+<input type="button" value="가자서버로" onclick="kaja()">
+
+</body>
+</html>

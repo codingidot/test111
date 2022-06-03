@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+request.setCharacterEncoding("ecu-kr"); //post방식으로 했으므로
+String irum=(String)request.getParameter("irum");
+String na2=(String)request.getParameter("na2");
+out.println("여기는 자바스타일로 출력"+irum+","+na2+"<br>");
+%>
+
+</body>
+</html>

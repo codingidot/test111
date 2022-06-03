@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <!-- cookie 스토리
+  
+  작은파일, 광고
+  클라이언트 접속을 하면 쿠키를 생성- 클라이언트 전송 -저장도 클라이언트
+  
+  <자바스크립트 쿠키구조></자바스크립트>
+   (자바도 비슷) addCookie
+  alert(document.cookie)->모든 쿠키가 찍혀나옴
+  document.cookie="쿠키이름=쿠키값;유효기간;도메인;path;secure"
+  document.cookie="aa=bb;expires= ;domain=;path;secure"
+  
+  name=value;expires=
+  
+  path: 새성한 페이지에서만 cookie read
+  		/ 라면       www.aa.com/이하의 모든 페이지에서 read
+  		
+  secure : https 로 안전한 전송	 -->	
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- <쿠키형식>은 -->
+<!-- 쿠키명=쿠키명;expires=유효기간.....
+alert(document.cookie)
+indexOf("ondal") babo is not ondal, ondal is smart..
+o라는 글자는 앞에서 부터 20번째 있네(or ondal이라는 글자가 있어???) -->
+<!--  C언어에서 strcmp("자바")자바인 책만찾음,  strstr("자바") 자바 들어가는 모든책 찾음
+ 자바에서는 .equals("자바")자바인 책만찾음, indexOf("자바") 자바 들어가는 모든책 찾음
+ 자바스크립트에서   indexOf("자바") 자바 들어가는 모든책 찾음 -->
+<script>
+//개체.속성=값 객체.이벤트=이벤트핸들러(event handler)
+window.onload=function(){kaja();}
+
+function kaja(){                  //쿠키명=쿠키값
+	if(document.cookie.indexOf("annaeCookie=kongji1")==-1){//not
+		window.open("NewFile5.html","cookieWin2",
+				"width=370, height=300, top=20, left=350,location=no")
+				
+	}
+}
+</script>
+</head>
+<body style="background-color:cyan;">
+<h3>popup창열자</h3>
+<pre>
+	여기는 본문이 있는 곳으로 
+	본문은 말 그대로 본문이다
+</pre>
+</body>
+</html>

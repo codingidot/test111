@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<h3> 채팅 </h3>
+
+<textarea rows="10" cols="50" readonly id="ta2"></textarea> <br>
+
+<h3>닉네임</h3>
+<input type="text" id="who2" value="홍길동">
+
+<h3>보낼 글 </h3>
+<input type="text" id="chat2" onkeyup="enterkey()">
+<!-- onkeyup : down이 누르는거고 on 은 눌렀다 뗐을 때  -->
+
+<input type="submit" value="가자" onclick="kajaChool();">
+
+
+<script>
+function enterkey(){
+	if(window.event.keyCode == 13){ // ascii code 에서 엔터키 13 
+		kajaChool();
+	}
+}
+
+function kajaChool(){               // 비활성화 
+	document.getElementById("who2").disabled=true; // 이름 한번 정하면 변경 불가 
+	
+	ta2.value += "[" + who2.value + "] " + chat2.value + "\n";
+	// [홍길동] 이먼저 출력되고 그 다음 입력한 채팅 내용 출력 
+	
+	ws2.send("[" + who2.value +"] " + chat2.value );
+	//그리고 상대방에게도 [홍길동] 및 채팅내용이 출력되게 함 
+	
+	chat2.value = "";
+	chat2.focus();
+	
+}
+</script>
+
+
+<script>
+
+	// SSL 일 경우 wss://  사용.
+	// SSL 이란? 
+	// Secure Socket Layer를 말하며 TLS(Transport Layer Security) 라고도 함
+	// SSL 은 client 와 server 사이의 통신 등에 암호화를 사용하는 것으로 smtp, ftp  등 다양한 곳에서 사용한 것
+	// https 는 http에 ssl 을 적용한 것 
+		
+//var ws1 = new WebSocket("ws://localhost:8080/0516_websocket/kaja");
+// html 이기 때문에 jsp 처럼 쓸 수 없음 .
+// var ws1 = new WebSocket("ws://localhost:8080" + "<%=request.getContextPath()%>/kaja");
+
+	
+	// websocket 객체 ws1 을 생성 
+	// +  ws://localhost:8080/플젝명/url  서버에 접속
+
+	
+var ws2 = new WebSocket("ws://localhost:8080/WebSocket1/kaja");
+var chat2 = document.getElementById('chat2');
+var ta2 = document.getElementById('ta2');
+
+ws2.onerror = function(aa){
+	alert('error');
+};
+
+ws2.onopen = function(aa){
+	alert("[채팅 시작하세요 ]")
+	who2.focus();
+	who2.select();
+}
+
+
+ws2.onmessage = function(aa){
+	ta2.value += aa.data + "\n";
+}
+
+// 알림창의 경우 notification 을 사용하면 된다. html5 에만 있음. 
+// 자바스크립트에서 window.notification 이 가능한지 조건문으로 물어보고 그 다음에 띄워지도록 하면 된다. 
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

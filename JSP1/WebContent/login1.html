@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>request</title>
+</head>
+<body>
+<h1>로그인</h1>
+	<!-- 지금 여기는 자료를 입력받아 서버로 넘겨주는 곳 -->
+
+<form action="kajalogin.jsp" method="get"> <!-- get방식은 head통해서 전달 -->
+
+	아이디<input type="text" name="id1" required><br> <!-- required는 반드시 입력해야 하는것 -->
+	암호<input type="password" name="pw1" required><br>
+	나이<input type="text" name="na1" required><br>
+	
+	<input type="submit" value="가자서버로">
+	<input type="reset" value="취소">
+	
+	
+</form>	
+</body>
+</html>
